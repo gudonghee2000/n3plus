@@ -434,7 +434,7 @@ function saveClientData() {
         type: "POST",
         url: "/question/save",
         data: {
-            "message": messageForClient,
+            "clientmessage": messageForClient,
             "userName" : nameResult,
             "name" : characterName,
         },
