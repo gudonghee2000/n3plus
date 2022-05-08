@@ -351,7 +351,16 @@ worryAnswer.addEventListener('keypress', function (key) {
             async:true,
             success: function(data){
                 const emotionName = data.emotion;
-                console.log(emotionName);
+                var messageForAdd;
+                if (emotionName == "경험") {
+                    const character = document.querySelector(".question_pixelart");
+                    var messageForAdd = "헙,, 좀 속상했겠다. 😢 \n";
+                } else if(emotionName = "미경험") {
+                    const character = document.querySelector(".question_pixelart");
+                    character.classList.add("question_face-right");
+                    var messageForAdd = "ㅎㅎ 딱히 없다면 오히려 좋을지도 😜 \n";    
+                }
+                typingTxt = messageForAdd + typingTxt;
                 tyseven = setInterval(sevenTyping, 100);
             }
         })
