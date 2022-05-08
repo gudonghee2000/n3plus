@@ -352,15 +352,16 @@ worryAnswer.addEventListener('keypress', function (key) {
             success: function(data){
                 const emotionName = data.emotion;
                 var messageForAdd;
-                if (emotionName == "경험") {
+                if (emotionName === "경험") {
                     const character = document.querySelector(".question_pixelart");
                     var messageForAdd = "헙,, 좀 속상했겠다. 😢 \n";
-                } else if(emotionName = "미경험") {
+                } else if(emotionName === "미경험") {
                     const character = document.querySelector(".question_pixelart");
+                    character.classList.remove("question_face-left");
                     character.classList.add("question_face-right");
                     var messageForAdd = "ㅎㅎ 딱히 없다면 오히려 좋을지도 😜 \n";    
                 }
-                typingTxt = messageForAdd + typingTxt;
+                typingTxt = messageForAdd + nameResult + "! 너는 힘든 일이나 무거운 감정들이 찾아올 때 \n 주변에 이야기를 잘 하는 편이야?";
                 tyseven = setInterval(sevenTyping, 100);
             }
         })
