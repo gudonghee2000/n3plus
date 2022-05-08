@@ -340,8 +340,6 @@ const worryAnswer = document.querySelector("#worry");
 worryAnswer.addEventListener('keypress', function (key) {
     if (key.key == 'Enter') {
         middleAnswer = worryAnswer.value;
-        const character = document.querySelector(".question_pixelart");
-        character.classList.remove("question_face-left");
         worryAnswer.remove();
         text.innerHTML = "";
         typingTxt = "음.. 어디보자...";
