@@ -113,6 +113,7 @@
 }
 
 .PixelArtImage {
+  touch-action: manipulation;
   image-rendering: -moz-crisp-edges;
   image-rendering: -webkit-crisp-edges;
   -ms-interpolation-mode: nearest-neighbor;
@@ -121,6 +122,7 @@
 }
 
 .Character {
+  touch-action: manipulation;
   width: calc(var(--pixel-size) * 32px);
   height: calc(var(--pixel-size) * 32px);
   overflow: hidden;
@@ -151,6 +153,7 @@
 }
 
 .Character_sprite-sheet_accessory.walk {
+  touch-action: manipulation;
   width: calc(var(--pixel-size) * 128px);
   position: absolute;
   top: 0;
@@ -159,10 +162,12 @@
 }
 
 .Character_sprite-sheet_accessory.active_accessory.walk {
+  touch-action: manipulation;
   display: block;
 }
 
 .Character_sprite-sheet_base.walk {
+  touch-action: manipulation;
   width: calc(var(--pixel-size) * 128px);
   position: absolute;
   top: 0;
@@ -172,11 +177,13 @@
 }
 
 .Character_sprite-sheet_base.active_base.walk {
+  touch-action: manipulation;
   display: block;
 }
 
 /* 헤어 */
 .Character_sprite-sheet_hair.walk {
+  touch-action: manipulation;
   width: calc(var(--pixel-size) * 128px);
   /* -webkit-animation: walkAnimation 1.5s steps(4) infinite;
     animation: walkAnimation 1.5s steps(4) infinite;  */
@@ -189,11 +196,13 @@
 }
 
 .Character_sprite-sheet_hair.active_hair.walk {
+  touch-action: manipulation;
   display: block;
 }
 
 /* 옷 */
 .Character_sprite-sheet_cloth.walk {
+  touch-action: manipulation;
   width: calc(var(--pixel-size) * 128px);
   /* -webkit-animation: walkAnimation 1.5s steps(4) infinite;
     animation: walkAnimation 1.5s steps(4) infinite;  */
@@ -206,11 +215,13 @@
 }
 
 .Character_sprite-sheet_cloth.active_cloth.walk {
+  touch-action: manipulation;
   display: block;
 }
 
 /* 바지 */
 .Character_sprite-sheet_bottom.walk {
+  touch-action: manipulation;
   width: calc(var(--pixel-size) * 128px);
   /* -webkit-animation: walkAnimation 1.5s steps(4) infinite;
     animation: walkAnimation 1.5s steps(4) infinite;  */
@@ -223,11 +234,13 @@
 }
 
 .Character_sprite-sheet_bottom.active_bottom.walk {
+  touch-action: manipulation;
   display: block;
 }
 
 /* 신발 */
 .Character_sprite-sheet_shoes.walk {
+  touch-action: manipulation;
   width: calc(var(--pixel-size) * 128px);
   /* -webkit-animation: walkAnimation 1.5s steps(4) infinite;
     animation: walkAnimation 1.5s steps(4) infinite;  */
@@ -240,6 +253,7 @@
 }
 
 .Character_sprite-sheet_shoes.active_shoes.walk {
+  touch-action: manipulation;
   display: block;
 }
 
@@ -354,6 +368,7 @@ EX: https://s3-us-west-2.amazonaws.com/s.cdpn.io/21542/WalkingDemo-HANK-2-SHEET.
 
 /* Demo UI Stuff ------------------------------------------------- */
 * {
+  touch-action: manipulation;
   box-sizing: border-box;
 }
 
