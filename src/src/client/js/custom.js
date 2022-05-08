@@ -150,21 +150,23 @@ spritesheets_accessory.forEach((spritesheet, index) => {
 	spritesheetElements += `<img src="${spritesheet}" class="PixelArtImage walk Character_sprite-sheet_accessory accessory_index-${index}" />`
 	// navigationElements += `<button class="NavigationBubble index-${index}" onclick='setActive_accessory(${index})' />`
 });
-
-spritesheets_cloth.forEach((spritesheet, index) => {
-	spritesheetElements += `<img src="${spritesheet}" class="PixelArtImage walk Character_sprite-sheet_cloth cloth_index-${index}" />`
-	// navigationElements += `<button class="NavigationBubble index-${index}" onclick='setActive_cloth(${index})' />`
+spritesheets_shoes.forEach((spritesheet, index) => {
+	spritesheetElements += `<img src="${spritesheet}" class="PixelArtImage walk Character_sprite-sheet_shoes shoes_index-${index}" />`
+	// navigationElements += `<button class="NavigationBubble index-${index}" onclick='setActive_shoes(${index})' />`
 });
+
 
 spritesheets_bottom.forEach((spritesheet, index) => {
 	spritesheetElements += `<img src="${spritesheet}" class="PixelArtImage walk Character_sprite-sheet_bottom bottom_index-${index}" />`
 	// navigationElements += `<button class="NavigationBubble index-${index}" onclick='setActive_bottom(${index})' />`
 });
-
-spritesheets_shoes.forEach((spritesheet, index) => {
-	spritesheetElements += `<img src="${spritesheet}" class="PixelArtImage walk Character_sprite-sheet_shoes shoes_index-${index}" />`
-	// navigationElements += `<button class="NavigationBubble index-${index}" onclick='setActive_shoes(${index})' />`
+spritesheets_cloth.forEach((spritesheet, index) => {
+	spritesheetElements += `<img src="${spritesheet}" class="PixelArtImage walk Character_sprite-sheet_cloth cloth_index-${index}" />`
+	// navigationElements += `<button class="NavigationBubble index-${index}" onclick='setActive_cloth(${index})' />`
 });
+
+
+
 
 characterElement.insertAdjacentHTML( 'beforeend', spritesheetElements );
 
@@ -410,18 +412,18 @@ accessoryPrevButton.addEventListener("click", function () {
 	setPreviousActive_accessory();
 	setPreviousActive_base();
 	hair_re();
-	cloth_re();
-	bottom_re();
 	shoes_re();
+	bottom_re();
+	cloth_re(); 
 })
 
 accessoryNextButton.addEventListener("click", function () {
 	setNextActive_accessory();
 	setPreviousActive_base();
 	hair_re();
-	cloth_re();
-	bottom_re();
 	shoes_re();
+	bottom_re();
+	cloth_re(); 
 })
 
 const hairPrevButton = document.querySelector(".NextSpritesheetButton--prev--hair");
@@ -432,9 +434,9 @@ hairPrevButton.addEventListener("click", function () {
 	setPreviousActive_base(); 
 	accessory_re(); 
 	hair_re(); 
-	cloth_re(); 
-	bottom_re(); 
 	shoes_re();
+	bottom_re();
+	cloth_re(); 
 })
 
 hairNextButton.addEventListener("click", function () {
@@ -442,9 +444,9 @@ hairNextButton.addEventListener("click", function () {
 	setNextActive_base(); 
 	accessory_re(); 
 	hair_re(); 
-	cloth_re(); 
-	bottom_re(); 
 	shoes_re();
+	bottom_re();
+	cloth_re(); 
 })
 
 const clothPrevButton = document.querySelector(".NextSpritesheetButton--prev--cloth");
@@ -455,9 +457,9 @@ clothPrevButton.addEventListener("click", function () {
 	setPreviousActive_base(); 
 	accessory_re(); 
 	hair_re(); 
-	cloth_re(); 
-	bottom_re(); 
 	shoes_re();
+	bottom_re();
+	cloth_re(); 
 })
 
 clothNextButton.addEventListener("click", function () {
@@ -465,9 +467,9 @@ clothNextButton.addEventListener("click", function () {
 	setNextActive_base(); 
 	accessory_re(); 
 	hair_re(); 
-	cloth_re(); 
-	bottom_re(); 
 	shoes_re();
+	bottom_re();
+	cloth_re(); 
 })
 
 const bottomPrevButton = document.querySelector(".NextSpritesheetButton--prev--bottom");
@@ -478,9 +480,9 @@ bottomPrevButton.addEventListener("click", function () {
 	setPreviousActive_base(); 
 	accessory_re(); 
 	hair_re(); 
+	shoes_re();
+	bottom_re();
 	cloth_re(); 
-	bottom_re(); 
-	shoes_re(); 
 })
 
 bottomNextButton.addEventListener("click", function () {
@@ -488,9 +490,9 @@ bottomNextButton.addEventListener("click", function () {
 	setPreviousActive_base(); 
 	accessory_re(); 
 	hair_re(); 
+	shoes_re();
+	bottom_re();
 	cloth_re(); 
-	bottom_re(); 
-	shoes_re(); 
 })
 
 const shoesPrevButton = document.querySelector(".NextSpritesheetButton--prev--shoes");
@@ -501,9 +503,9 @@ shoesPrevButton.addEventListener("click", function () {
 	setPreviousActive_base(); 
 	accessory_re(); 
 	hair_re(); 
-	cloth_re(); 
-	bottom_re(); 
 	shoes_re();
+	bottom_re();
+	cloth_re(); 
 })
 
 shoesNextButton.addEventListener("click", function () {
@@ -511,9 +513,10 @@ shoesNextButton.addEventListener("click", function () {
 	setPreviousActive_base(); 
 	accessory_re(); 
 	hair_re(); 
-	cloth_re(); 
-	bottom_re(); 
 	shoes_re();
+	bottom_re();
+	cloth_re(); 
+
 })
 
 const downButton = document.querySelector(".DirectionArrow-down");

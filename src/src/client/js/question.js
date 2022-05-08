@@ -64,6 +64,8 @@ nameAnswer.addEventListener('keypress', function (key) {
         nameResult = nameAnswer.value;
         characterName = $("#question_character").text();
         nameAnswer.remove();
+        const character = document.querySelector(".question_pixelart");
+        character.classList.add("question_face-right");
         typingTxt = nameResult + "? 좋아. \n 난 편하게 " + characterName + "(이)라고 불러줘😎 \n 오늘 뭐 타고 왔어? \n";
         typingIdx = 0;
         text.innerHTML = "";
@@ -103,6 +105,9 @@ const trafficAnswer = document.querySelector("#traffic");
 trafficAnswer.addEventListener('keypress', function (key) {
     if (key.key == 'Enter') {
         trafficAnswer.remove();
+        const character = document.querySelector(".question_pixelart");
+        character.classList.remove("question_face-right");
+        character.classList.add("question_face-left");
         typingTxt = "그랬구나. 와줘서 정말 고마워! 🤲 \n" + nameResult + "! 넌 멘탈이 강한 편이야?"
         typingIdx = 0;
         text.innerHTML = "";
@@ -154,6 +159,8 @@ function createThirdAnswer() {
             controls.removeChild(third);
             document.querySelector(".question_typing").style.display = "inline-block";
             messageForClient = "누구보다 강인한 멘탈을 가진 " + nameResult + "! 나 " + characterName + "! \n";
+            const character = document.querySelector(".question_pixelart");
+            character.classList.remove("question_face-left");
             tyfour = setInterval(fourTyping, 100);
         })
         second.addEventListener("click", function () {
@@ -162,6 +169,8 @@ function createThirdAnswer() {
             controls.removeChild(third);
             document.querySelector(".question_typing").style.display = "inline-block";
             messageForClient = "스스로 약한 멘탈을 갖고 있다고 말했지만, 그 속에 강인함을 감추고 있는 " + nameResult + "! 나 " + characterName + "! \n";
+            const character = document.querySelector(".question_pixelart");
+            character.classList.remove("question_face-left");
             tyfour = setInterval(fourTyping, 100);
         })
         third.addEventListener("click", function () {
@@ -170,6 +179,8 @@ function createThirdAnswer() {
             controls.removeChild(third);
             document.querySelector(".question_typing").style.display = "inline-block";
             messageForClient = "누구보다 상황을 유연하게 맞이하려고 하는 " + nameResult + ". 나 " + characterName + "! \n";
+            const character = document.querySelector(".question_pixelart");
+            character.classList.remove("question_face-left");
             tyfour = setInterval(fourTyping, 100);
         })
         thirdAnswerBool = true;
@@ -216,6 +227,8 @@ function createFourAnswer() {
         controls.appendChild(third);
 
         first.addEventListener("click", function () {
+            const character = document.querySelector(".question_pixelart");
+            character.classList.add("question_face-left");
             controls.removeChild(first);
             controls.removeChild(second);
             controls.removeChild(third);
@@ -224,6 +237,8 @@ function createFourAnswer() {
             tyfive = setInterval(fiveTyping, 100);
         })
         second.addEventListener("click", function () {
+            const character = document.querySelector(".question_pixelart");
+            character.classList.add("question_face-left");
             controls.removeChild(first);
             controls.removeChild(second);
             controls.removeChild(third);
@@ -232,6 +247,8 @@ function createFourAnswer() {
             tyfive = setInterval(fiveTyping, 100);
         })
         third.addEventListener("click", function () {
+            const character = document.querySelector(".question_pixelart");
+            character.classList.add("question_face-left");
             controls.removeChild(first);
             controls.removeChild(second);
             controls.removeChild(third);
@@ -321,9 +338,21 @@ function createWorryAnswer() {
 const worryAnswer = document.querySelector("#worry");
 worryAnswer.addEventListener('keypress', function (key) {
     if (key.key == 'Enter') {
+        const middleAnswer = worryAnswer.value; 
+        const character = document.querySelector(".question_pixelart");
+        character.classList.remove("question_face-left");
         worryAnswer.remove();
         text.innerHTML = "";
-        tyseven = setInterval(sevenTyping, 100);
+        $.ajax({
+            type: "POST",
+            url: "/question/middleQuestion",
+            data: {"middleAnswer": middleAnswer},
+            dataType:"JSON",
+            success: function(data){
+                const emotionName = data.emotion;
+                tyseven = setInterval(sevenTyping, 100);
+            }
+        })
     }
 })
 
@@ -360,6 +389,8 @@ function createNewAnswer() {
         controls.appendChild(second);
 
         first.addEventListener("click", function () {
+            const character = document.querySelector(".question_pixelart");
+            character.classList.add("question_face-left");
             controls.removeChild(first);
             controls.removeChild(second);
             document.querySelector(".question_typing").style.display = "inline-block";
@@ -369,6 +400,8 @@ function createNewAnswer() {
             tyfive = setInterval(eightTyping, 100);
         })
         second.addEventListener("click", function () {
+            const character = document.querySelector(".question_pixelart");
+            character.classList.add("question_face-left");
             controls.removeChild(first);
             controls.removeChild(second);
             document.querySelector(".question_typing").style.display = "inline-block";
@@ -391,7 +424,8 @@ function eightTyping() {
         typingIdx++;
     } else {
         checkIdx++;
-
+        typingIdx = 0;
+        typingTxt = "음.. 어디보자...";
         setTimeout(function () {
             createLastAnswer();
         }, 1000);
@@ -414,10 +448,7 @@ lastAnswer.addEventListener('keypress', function (key) {
         lastMessage = lastAnswer.value;
         lastAnswer.remove();
         text.innerHTML = "";
-        typingIdx = 0;
-        typingTxt = "음.. 어디보자...";
-        waitTyping();
-        sendMessageToServer();
+        setInterval(waitTyping, 100);
     }
 })
 
@@ -430,7 +461,9 @@ function waitTyping() {
         text.innerHTML += txt === "\n" ? "<br/>" : txt;
         typingIdx++;
     } else {
+        checkIdx++;
         setTimeout(function () {
+            sendMessageToServer();
         }, 1000);
     }
 }
@@ -450,13 +483,16 @@ function sendMessageToServer() {
             text.innerHTML = "";
             typingIdx = 0;
             typingTxt = "너는 " + categoryName + "에 대해 걱정이 많았구나... \n " + "좋아! " + nameResult + "! \n 짧게나마 이야기 나눌 수 있어서 좋았어. \n 내가 널 위해 편지를 준비했는데 읽어볼래? 😉";
+            const character = document.querySelector(".question_pixelart");
+            character.classList.remove("question_face-left");
+            character.classList.add("question_face-up");
             tyseven = setInterval(nineTyping, 100);
         }
     })
 }
 
 function nineTyping() {
-    if (checkIdx >= 10) {
+    if (checkIdx >= 11) {
         return;
     }
     if (typingIdx < typingTxt.length) {

@@ -1,7 +1,7 @@
 import customModel from "../models/Custom";
 
 export const getQuestion = async (req, res) => {
-    const datas = await customModel.find({}).sort({"id": -1});
+    const datas = await customModel.find({}).sort({ "id": -1 });
     const name = await datas[0].name;
     const url = await "/" + datas[0].url;
     return res.render("question", { name, url });
@@ -9,19 +9,19 @@ export const getQuestion = async (req, res) => {
 
 export const postQuestion = async (req, res) => {
     const { lastMessage } = req.body;
-    const {spawn} = require('child_process');
+    const { spawn } = require('child_process');
     const result = spawn('python3', [process.cwd() + '/lastMessage.py', lastMessage]);
 
     let pororoResult;
     var categoryName;
-    
+
     result.stdout.on('data', (data) => {
         console.log(data.toString());
         pororoResult = data.toString();
         categoryName = makeMessage(pororoResult);
     })
     result.on('close', (code) => {
-        return res.json({name:categoryName});
+        return res.json({ name: categoryName });
     })
 }
 
@@ -29,12 +29,12 @@ function makeMessage(pororoResult) {
     var catecory = new Array();
     var percentage = new Array();
 
-    pororoResult = pororoResult.substr(1, pororoResult.length-2);
+    pororoResult = pororoResult.substr(1, pororoResult.length - 2);
     pororoResult = pororoResult.split(",");
     for (var i = 0; i < pororoResult.length; i++) { // 배열 arr의 모든 요소의 인덱스(index)를 출력함.
         var tmp = pororoResult[i].split(":");
         catecory.push(tmp[0].replace("'", "").replace(" ", "").replace("'", ""));
-        percentage.push(parseFloat(tmp[1]));               
+        percentage.push(parseFloat(tmp[1]));
     }
     var maxPercentage = 0;
     var maxIndex = 0;
@@ -48,9 +48,26 @@ function makeMessage(pororoResult) {
 }
 
 export const postQuestionSave = async (req, res) => {
-    const {clientmessage, userName, name } = req.body;
+    const { clientmessage, userName, name } = req.body;
     console.log(clientmessage);
     console.log(userName);
     console.log(name);
-    await customModel.findOneAndUpdate({name}, {$set:{username: userName, message:clientmessage}});
+    await customModel.findOneAndUpdate({ name }, { $set: { username: userName, message: clientmessage } });
+}
+
+export const postMiddleQuestion = async (req, res) => {
+    const { middleAnswer } = req.body;
+    const { spawn } = require('child_process');
+    const result = spawn('python3', [process.cwd() + '/lastMessage.py', lastMessage]);
+
+    let pororoResult;
+    var emotionName;
+
+    result.stdout.on('data', (data) => {
+        console.log(data.toString());
+        pororoResult = data.toString();
+    })
+    result.on('close', (code) => {
+        return res.json({ emotion: emotionName });
+    })
 }
