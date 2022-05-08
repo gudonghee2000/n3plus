@@ -343,6 +343,8 @@ worryAnswer.addEventListener('keypress', function (key) {
         character.classList.remove("question_face-left");
         worryAnswer.remove();
         text.innerHTML = "";
+        typingTxt = "음.. 어디보자...";
+        setInterval(middleTyping, 100);
         $.ajax({
             type: "POST",
             url: "/question/middleQuestion",
@@ -361,6 +363,8 @@ worryAnswer.addEventListener('keypress', function (key) {
                     character.classList.add("question_face-right");
                     var messageForAdd = "ㅎㅎ 딱히 없다면 오히려 좋을지도 😜 \n";    
                 }
+                text.innerHTML = "";
+                typingIdx = 0;
                 typingTxt = messageForAdd + nameResult + "! 너는 힘든 일이나 무거운 감정들이 찾아올 때 \n 주변에 이야기를 잘 하는 편이야?";
                 tyseven = setInterval(sevenTyping, 100);
             }
@@ -368,8 +372,23 @@ worryAnswer.addEventListener('keypress', function (key) {
     }
 })
 
-function sevenTyping() {
+function middleTyping() {
     if (checkIdx >= 8) {
+        return;
+    }
+    if (typingIdx < typingTxt.length) {
+        let txt = typingTxt[typingIdx];
+        text.innerHTML += txt === "\n" ? "<br/>" : txt;
+        typingIdx++;
+    } else {
+        checkIdx++;
+        setTimeout(function () {
+        }, 1000);
+    }
+}
+
+function sevenTyping() {
+    if (checkIdx >= 9) {
         return;
     }
     if (typingIdx < typingTxt.length) {
@@ -427,7 +446,7 @@ function createNewAnswer() {
 }
 
 function eightTyping() {
-    if (checkIdx >= 9) {
+    if (checkIdx >= 10) {
         return;
     }
     if (typingIdx < typingTxt.length) {
@@ -465,7 +484,7 @@ lastAnswer.addEventListener('keypress', function (key) {
 })
 
 function waitTyping() {
-    if (checkIdx >= 10) {
+    if (checkIdx >= 11) {
         return;
     }
     if (typingIdx < typingTxt.length) {
@@ -504,7 +523,7 @@ function sendMessageToServer() {
 }
 
 function nineTyping() {
-    if (checkIdx >= 11) {
+    if (checkIdx >= 12) {
         return;
     }
     if (typingIdx < typingTxt.length) {
