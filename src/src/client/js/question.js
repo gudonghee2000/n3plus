@@ -348,8 +348,10 @@ worryAnswer.addEventListener('keypress', function (key) {
             url: "/question/middleQuestion",
             data: {"middleAnswer": middleAnswer},
             dataType:"JSON",
+            async:true,
             success: function(data){
                 const emotionName = data.emotion;
+                console.log(emotionName);
                 tyseven = setInterval(sevenTyping, 100);
             }
         })
