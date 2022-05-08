@@ -58,7 +58,7 @@ export const postQuestionSave = async (req, res) => {
 export const postMiddleQuestion = async (req, res) => {
     const { middleAnswer } = req.body;
     const { spawn } = require('child_process');
-    const result = spawn('python3', [process.cwd() + '/lastMessage.py', lastMessage]);
+    const result = spawn('python3', [process.cwd() + '/middleMessge.py', middleAnswer]);
 
     let pororoResult;
     var emotionName;
@@ -66,6 +66,7 @@ export const postMiddleQuestion = async (req, res) => {
     result.stdout.on('data', (data) => {
         console.log(data.toString());
         pororoResult = data.toString();
+        emotionName = makeMessage(pororoResult);
     })
     result.on('close', (code) => {
         return res.json({ emotion: emotionName });
