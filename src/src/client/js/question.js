@@ -5,16 +5,16 @@ const text = document.querySelector(".question_typing");
 
 var tyInt = setInterval(firstTyping, 100);
 
-$.fn.textWidth = function(text, font) {
-    
+$.fn.textWidth = function (text, font) {
+
     if (!$.fn.textWidth.fakeEl) $.fn.textWidth.fakeEl = $('<span>').hide().appendTo(document.body);
-    
+
     $.fn.textWidth.fakeEl.text(text || this.val() || this.text() || this.attr('placeholder')).css('font', font || this.css('font'));
-    
+
     return $.fn.textWidth.fakeEl.width();
 };
 
-$('.width-dynamic').on('input', function() {
+$('.width-dynamic').on('input', function () {
     var inputWidth = $(this).textWidth();
     $(this).css({
         width: inputWidth + 10
@@ -335,40 +335,17 @@ function createWorryAnswer() {
     }
 }
 
+var middleAnswer;
 const worryAnswer = document.querySelector("#worry");
 worryAnswer.addEventListener('keypress', function (key) {
     if (key.key == 'Enter') {
-        const middleAnswer = worryAnswer.value; 
+        middleAnswer = worryAnswer.value;
         const character = document.querySelector(".question_pixelart");
         character.classList.remove("question_face-left");
         worryAnswer.remove();
         text.innerHTML = "";
         typingTxt = "음.. 어디보자...";
         setInterval(middleTyping, 100);
-        $.ajax({
-            type: "POST",
-            url: "/question/middleQuestion",
-            data: {"middleAnswer": middleAnswer},
-            dataType:"JSON",
-            async:true,
-            success: function(data){
-                const emotionName = data.emotion;
-                var messageForAdd;
-                if (emotionName === "경험") {
-                    const character = document.querySelector(".question_pixelart");
-                    var messageForAdd = "헙,, 좀 속상했겠다. 😢 \n";
-                } else if(emotionName === "미경험") {
-                    const character = document.querySelector(".question_pixelart");
-                    character.classList.remove("question_face-left");
-                    character.classList.add("question_face-right");
-                    var messageForAdd = "ㅎㅎ 딱히 없다면 오히려 좋을지도 😜 \n";    
-                }
-                text.innerHTML = "";
-                typingIdx = 0;
-                typingTxt = messageForAdd + nameResult + "! 너는 힘든 일이나 무거운 감정들이 찾아올 때 \n 주변에 이야기를 잘 하는 편이야?";
-                tyseven = setInterval(sevenTyping, 100);
-            }
-        })
     }
 })
 
@@ -383,8 +360,36 @@ function middleTyping() {
     } else {
         checkIdx++;
         setTimeout(function () {
+            sendMiddleAnswerToServer();
         }, 1000);
     }
+}
+
+function sendMiddleAnswerToServer() {
+    $.ajax({
+        type: "POST",
+        url: "/question/middleQuestion",
+        data: { "middleAnswer": middleAnswer },
+        dataType: "JSON",
+        async: true,
+        success: function (data) {
+            const emotionName = data.emotion;
+            var messageForAdd;
+            if (emotionName === "경험") {
+                const character = document.querySelector(".question_pixelart");
+                var messageForAdd = "헙,, 좀 속상했겠다. 😢 \n";
+            } else if (emotionName === "미경험") {
+                const character = document.querySelector(".question_pixelart");
+                character.classList.remove("question_face-left");
+                character.classList.add("question_face-right");
+                var messageForAdd = "ㅎㅎ 딱히 없다면 오히려 좋을지도 😜 \n";
+            }
+            text.innerHTML = "";
+            typingIdx = 0;
+            typingTxt = messageForAdd + nameResult + "! 너는 힘든 일이나 무거운 감정들이 찾아올 때 \n 주변에 이야기를 잘 하는 편이야?";
+            tyseven = setInterval(sevenTyping, 100);
+        }
+    })
 }
 
 function sevenTyping() {
@@ -509,7 +514,7 @@ function sendMessageToServer() {
         },
         dataType: "JSON",
         async: true,
-        success: function(data){
+        success: function (data) {
             categoryName = data.name;
             text.innerHTML = "";
             typingIdx = 0;
@@ -546,8 +551,8 @@ function saveClientData() {
         url: "/question/save",
         data: {
             "clientmessage": messageForClient,
-            "userName" : nameResult,
-            "name" : characterName,
+            "userName": nameResult,
+            "name": characterName,
         },
         dataType: "JSON",
         async: true,
