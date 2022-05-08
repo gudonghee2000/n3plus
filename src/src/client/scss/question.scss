@@ -93,7 +93,7 @@ ul {
 
 .answer1 {
    font-family: "Pokemon GB", monospace;
-   font-weight: 400;
+   font-weight: bold;
    font-size: 20px;
    text-transform: uppercase;
    font-smooth: never;
@@ -105,7 +105,7 @@ ul {
 
 .answer2 {
    font-family: "Pokemon GB", monospace;
-   font-weight: 400;
+   font-weight: bold;
    font-size: 20px;
    text-transform: uppercase;
    font-smooth: never;
@@ -117,7 +117,7 @@ ul {
 
 .answer3 {
    font-family: "Pokemon GB", monospace;
-   font-weight: 400;
+   font-weight: bold;
    font-size: 20px;
    text-transform: uppercase;
    font-smooth: never;
@@ -129,7 +129,7 @@ ul {
 
 .answer4 {
    font-family: "Pokemon GB", monospace;
-   font-weight: 400;
+   font-weight: bold;
    font-size: 20px;
    text-transform: uppercase;
    font-smooth: never;
@@ -143,22 +143,22 @@ ul {
 
 /* 하영 추가 */
 .answer1:hover {
-   font-weight: 700;
+   font-weight: bold;
    color: rgb(37, 37, 37)
 }
 
 .answer2:hover {
-   font-weight: 700;
+   font-weight: bold;
    color: rgb(37, 37, 37)
 }
 
 .answer3:hover {
-   font-weight: 700;
+   font-weight: bold;
    color: rgb(37, 37, 37)
 }
 
 .answer4:hover {
-   font-weight: 700;
+   font-weight: bold;
    color: rgb(37, 37, 37)
 }
 
@@ -170,7 +170,7 @@ ul {
    background-color: transparent;
    border: 0;
    border-bottom: 2px solid rgb(194, 194, 194);
-   font-weight: 400;
+   font-weight: bold;
    font-size: medium;
    height: 40px;
    border-radius: 0;

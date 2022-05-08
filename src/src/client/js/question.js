@@ -5,6 +5,32 @@ const text = document.querySelector(".question_typing");
 
 var tyInt = setInterval(firstTyping, 100);
 
+$.fn.textWidth = function(text, font) {
+    
+    if (!$.fn.textWidth.fakeEl) $.fn.textWidth.fakeEl = $('<span>').hide().appendTo(document.body);
+    
+    $.fn.textWidth.fakeEl.text(text || this.val() || this.text() || this.attr('placeholder')).css('font', font || this.css('font'));
+    
+    return $.fn.textWidth.fakeEl.width();
+};
+
+$('.width-dynamic').on('input', function() {
+    var inputWidth = $(this).textWidth();
+    $(this).css({
+        width: inputWidth + 10
+    })
+}).trigger('input');
+
+
+function inputWidth(elem, minW, maxW) {
+    elem = $(this);
+    console.log(elem)
+}
+
+var targetElem = $('.width-dynamic');
+
+inputWidth(targetElem);
+
 function firstTyping() {
     if (checkIdx >= 2) {
         return;

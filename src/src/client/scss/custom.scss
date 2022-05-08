@@ -459,6 +459,7 @@ body {
 }
 
 .result {
+  margin-top: 500px;
   width: 2000px;
   height: 2000px;
   overflow: hidden;
@@ -481,7 +482,7 @@ body {
 	position: relative;
   font-size: larger;
   text-align: center;
-	font-weight: 200;
+	font-weight: bold;
   width: 350px;
 	height: 45px;
   margin: 30px 30px 30px 0px;
