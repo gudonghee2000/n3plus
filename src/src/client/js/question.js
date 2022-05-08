@@ -413,11 +413,27 @@ lastAnswer.addEventListener('keypress', function (key) {
     if (key.key == 'Enter') {
         lastMessage = lastAnswer.value;
         lastAnswer.remove();
-        typingIdx = 0;
         text.innerHTML = "";
+        typingIdx = 0;
+        typingTxt = "음.. 어디보자...";
+        waitTyping();
         sendMessageToServer();
     }
 })
+
+function waitTyping() {
+    if (checkIdx >= 10) {
+        return;
+    }
+    if (typingIdx < typingTxt.length) {
+        let txt = typingTxt[typingIdx];
+        text.innerHTML += txt === "\n" ? "<br/>" : txt;
+        typingIdx++;
+    } else {
+        setTimeout(function () {
+        }, 1000);
+    }
+}
 
 var categoryName = "";
 function sendMessageToServer() {
@@ -431,6 +447,8 @@ function sendMessageToServer() {
         async: true,
         success: function(data){
             categoryName = data.name;
+            text.innerHTML = "";
+            typingIdx = 0;
             typingTxt = "너는 " + categoryName + "에 대해 걱정이 많았구나... \n " + "좋아! " + nameResult + "! \n 짧게나마 이야기 나눌 수 있어서 좋았어. \n 내가 널 위해 편지를 준비했는데 읽어볼래? 😉";
             tyseven = setInterval(nineTyping, 100);
         }
