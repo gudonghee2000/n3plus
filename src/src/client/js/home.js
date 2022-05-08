@@ -3,7 +3,6 @@ var buttonBool = false;
 var typingIdx = 0;
 var liIndex = 0;
 var liLength = $(".color-controls>ul>li").length;
-
 var typingTxt = $(".color-controls>ul>li").eq(liIndex).text();
 typingTxt = typingTxt.split("");
 
@@ -48,6 +47,7 @@ function createButton() {
 
 var startDiv = document.querySelector('#start');
 startDiv.addEventListener("click", function () {
+    startDiv.style.display = "inline-block";
 	window.location.href = 'http://34.64.194.130:8080/custom';
 })
 

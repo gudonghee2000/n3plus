@@ -9,6 +9,7 @@ module.exports = {
     home: BASE_JS + "home.js",
     question: BASE_JS + "question.js",
     custom: BASE_JS + "custom.js",
+    loading: BASE_JS + "loading.js",
   },
   mode: "development",
   watch: true,
