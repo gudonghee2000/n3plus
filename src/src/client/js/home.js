@@ -1,37 +1,36 @@
 var typingBool = false;
 var buttonBool = false;
 var typingIdx = 0;
-var liIndex = 0;
-var liLength = $(".color-controls>ul>li").length;
-var typingTxt = $(".color-controls>ul>li").eq(liIndex).text();
+var liIndex = 1;
+var liLength = 4;
+var typingTxt = $("#home_" + liIndex).text();
 typingTxt = typingTxt.split("");
 
-if (typingBool == false) {
-    typingBool = true;
-    var tyInt = setInterval(typing, 100);
-}
+const realStart = document.querySelector("#realStart");
+
+
+realStart.addEventListener("click", function () {
+    realStart.style.display = "none";
+    setInterval(typing, 100);
+})
 
 function typing() {
     if (typingIdx < typingTxt.length) {
         $(".typing").append(typingTxt[typingIdx]);
         typingIdx++;
     } else {
-        if (liIndex >= liLength - 1) {
+        if (liIndex >= liLength) {
             createButton();
             return;
         } else {
             liIndex++;
         }
-
         typingIdx = 0;
-        typingBool = false;
-        typingTxt = $(".color-controls>ul>li").eq(liIndex).text();
-
-        clearInterval(tyInt);
+        typingTxt = $("#home_" + liIndex).text();
+        $(".typing").html('');
         setTimeout(function () {
-            $(".typing").html('');
-            tyInt = setInterval(typing, 100);
-        }, 1000);
+            setInterval(typing, 100);
+        }, 1500);
     }
 }
 
@@ -47,7 +46,8 @@ function createButton() {
 
 var startDiv = document.querySelector('#start');
 startDiv.addEventListener("click", function () {
-    startDiv.style.display = "inline-block";
-	window.location.href = 'http://34.64.194.130:8080/custom';
+	window.location.href = 'http://localhost:8080/custom';
 })
+
+
 

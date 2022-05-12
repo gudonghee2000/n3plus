@@ -17,7 +17,7 @@ $.fn.textWidth = function (text, font) {
 $('.width-dynamic').on('input', function () {
     var inputWidth = $(this).textWidth();
     $(this).css({
-        width: inputWidth + 10
+        width: inputWidth + 15
     })
 }).trigger('input');
 

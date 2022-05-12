@@ -1,13 +1,13 @@
 @font-face {
    font-family: 'Pokemon GB';
-   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/DOSGothic.woff') format('woff');
-   font-weight: 700;
-   font-style: normal;
+   src: url('https://cdn.rawgit.com/Superpencil/pokemon-font/d36892e5/fonts/pokemon-font.eot');
+   font-weight: 400;
 }
 
 $black: #555;
 $white: #fff;
-$primary-font: 'Pokemon GB', monospace;
+$primary-font: 'Pokemon GB',
+   monospace;
 $pixel: 0.25rem;
 
 @mixin dialogStyles() {
@@ -15,52 +15,91 @@ $pixel: 0.25rem;
    border-radius: $pixel * 2;
    border: double $pixel * 3 $black;
    box-shadow: inset 0 $pixel 0 $black, 0 $pixel 0 $black;
-   background-color: var(--base-color);
+   //background-color: var(--base-color);;
+   background-color: white; //수정
    color: $black;
 }
 
+
+
 @mixin pokeFont($size: 1) {
    font-family: 'Pokemon GB', monospace;
+   font-weight: 400;
    font-size: 10px * $size;
    text-transform: uppercase;
-   font-weight: 600;
+   font-smooth: never;
    -webkit-font-smoothing: none;
 }
 
+
+
+
 #home {
    display: flex;
-   align-items: center;
+   align-items: baseline;
    justify-content: center;
-   height: 100vh;
    font-family: $primary-font;
    font-size: 16px;
    line-height: 1.875em;
+   background-image: url('https://www.themasterpicks.com/wp-content/uploads/2020/04/22b22287602523.5dbd29081561d.gif');
+   background-size: 80%;
+   //(수정)배경 추가
+}
+
+
+
+
+//(수정) 클래스 추가
+.layer {
+   background-color: rgba(255, 255, 255, 0.4);
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
 }
 
 :root {
-   --pixel-size: 6;
+   --pixel-size1: 9;
 }
 
-.Character {
-   width: calc(32px * var(--pixel-size));
-   height: calc(32px * var(--pixel-size));
-   overflow: hidden;
+.Title {
+   width: auto;
    position: relative;
-   margin: 4em auto;
+   display: block;
+   margin: auto;
+   margin-top: -20px;
+}
+
+.home_title {
+   width: calc(var(--pixel-size) * 80px);
+   display: block;
+   margin: auto;
+   margin-top: -70px;
+}
+
+
+
+.Character1 {
+   width: calc(32px * var(--pixel-size1));
+   height: calc(32px * var(--pixel-size1));
+   position: relative;
+   overflow: hidden;
+   margin: -2em auto;
    margin-bottom: $pixel * 40;
 }
 
 .Character_spritesheet {
    animation: moveSpritesheet 1s steps(4) infinite;
-   width: calc(128px * var(--pixel-size));
+   width: calc(128px * var(--pixel-size1));
    position: absolute;
 
 }
 
 .Character_shadow {
    position: absolute;
-   width: calc(32px * var(--pixel-size));
-   height: calc(32px * var(--pixel-size));
+   width: calc(32px * var(--pixel-size1));
+   height: calc(32px * var(--pixel-size1));
 }
 
 .pixelart {
@@ -68,15 +107,15 @@ $pixel: 0.25rem;
 }
 
 .face-right {
-   top: calc(-32px * var(--pixel-size));
+   top: calc(-32px * var(--pixel-size1));
 }
 
 .face-up {
-   top: calc(-64px * var(--pixel-size));
+   top: calc(-64px * var(--pixel-size1));
 }
 
 .face-left {
-   top: calc(-96px * var(--pixel-size));
+   top: calc(-96px * var(--pixel-size1));
 }
 
 
@@ -90,20 +129,19 @@ $pixel: 0.25rem;
    }
 }
 
-.color-controls {
-   display: flex;
-   flex-direction: column;
+.home_color-controls {
    position: absolute;
    z-index: 99;
    left: 50%;
-   bottom: $pixel * 3;
+   bottom: $pixel * 20;
    max-width: $pixel * 150;
    width: 100%;
    margin-top: $pixel * 5;
-   margin-bottom: $pixel * 10;
+   margin-bottom: $pixel * 3;
    transform: translateX(-50%);
 
    @include dialogStyles;
+
 
    ul {
       display: none;
@@ -112,7 +150,25 @@ $pixel: 0.25rem;
 
    .typing {
       @include pokeFont(2);
-      display: inline-block;
+      display: block;
+      text-align: center;
+      animation-duration: 0.3s;
+      animation-iteration-count: infinite;
+
+   }
+
+   @keyframes cursor {
+      0% {
+         border-right: 1px solid #fff
+      }
+
+      50% {
+         border-right: 1px solid #000
+      }
+
+      100% {
+         border-right: 1px solid #fff
+      }
    }
 
    #start {
@@ -120,7 +176,16 @@ $pixel: 0.25rem;
       display: none;
       text-align: center;
       cursor: pointer;
-      margin-left: 250px;
-      animation: fadein 2s;
+      margin-left: 245px;
+      -webkit-animation: fadein 2s;
+   }
+
+   #realStart {
+      @include pokeFont(2);
+      display: block;
+      text-align: center;
+      cursor: pointer;
+      margin-left: 15px;
+      -webkit-animation: fadein 2s;
    }
 }
