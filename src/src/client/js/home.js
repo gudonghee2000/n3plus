@@ -30,7 +30,7 @@ function typing() {
         $(".typing").html('');
         setTimeout(function () {
             setInterval(typing, 100);
-        }, 1500);
+        }, 1000);
     }
 }
 
@@ -39,7 +39,7 @@ function createButton() {
         var typing = document.querySelector(".typing");
         typing.style.display = "none";
         var startButton = document.querySelector('#start');
-        startButton.style.display = "inline-block";        
+        startButton.style.display = "block";        
         buttonBool = true;
     }
 }

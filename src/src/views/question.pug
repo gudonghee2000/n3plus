@@ -3,18 +3,29 @@ html(lang="ko")
     head
         title 커스텀 페이지
         link(rel="stylesheet", href="/static/css/styles.css")
-    body
-        main
-            div(class="question_character")
-                img(class="question_character_spritesheet question_pixelart", src=url)
-            div(class="color-controls")
-                ul
-                    li(id="question_character") #{name}
-                p(class="question_typing")
-                input(id="name", type="text", placeHolder="", class="textinput width-dynamic")
-                input(id="traffic", type="text", placeHolder="", class="textinput width-dynamic")
-                input(id="worry", type="text", placeHolder="", class="textinput width-dynamic")
-                input(id="last", type="text", placeHolder="", class="textinput width-dynamic")
-            div(id="qrcode", style="width:100px; height:100px;")
+    body(class="question_body")
+        <div class="question_header_div">
+            div(class="question_header")
+                div(class="menu-circle" style=" cursor: pointer;" onclick="location.href='#';")
+        </div>
+        <div class="question_items_line">
+            main(class="question_main")
+                div(class="question_Title")
+                    img(class="question_title_img", src="home_title.png")
+                div(class="question_character")
+                    img(class="question_character_spritesheet question_pixelart", src=url)
+                div(class="question_color-controls")
+                    ul
+                        li(id="question_character") #{name}
+                    div(class="question_typing_div")
+                        p(class="question_typing")
+                    p(class="question_blank")
+                    input(id="question_name", type="text", placeHolder="", class="textinput width-dynamic")
+                    input(id="question_traffic", type="text", placeHolder="", class="textinput width-dynamic")
+                    input(id="question_worry", type="text", placeHolder="", class="textinput width-dynamic")
+                    input(id="question_last", type="text", placeHolder="", class="textinput width-dynamic")
+        </div>
+        div(id="stv" class="staticleft")
+        div(id="stv" class="staticright")  
         script(src="http://code.jquery.com/jquery-latest.js")
         script(src="/static/js/question.js")

@@ -301,17 +301,18 @@ body {
 
 .custom_items_line {
   margin-left: 22.5%;
-  padding-bottom: 53px;
+  padding-bottom: 122px;
   width: 55.0%;
   border-style: solid;
   border-width: 5px;
+  border-top-width: 0px;
   border-radius: 0px 0px 15px 15px;
   border-color: black;
 }
 
 
 .TitleImage {
-  width: calc(var(--pixel-size) * 80px);
+  width: calc(var(--pixel-size) * 55px);
   display: block;
   margin: auto;
   margin-top: -70px;
@@ -660,6 +661,10 @@ body {
 
 .custom_body {
   padding-top: 0;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 .custom_container {

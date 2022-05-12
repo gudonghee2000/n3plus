@@ -10,6 +10,7 @@ module.exports = {
     question: BASE_JS + "question.js",
     custom: BASE_JS + "custom.js",
     loading: BASE_JS + "loading.js",
+    nftPage: BASE_JS + "nftPage.js",
   },
   mode: "development",
   watch: true,

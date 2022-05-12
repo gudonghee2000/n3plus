@@ -78,3 +78,10 @@ function saveAs(canvas) {
 
     window.location.href = "http://localhost:8080/loading";
 }
+
+const nameInput = document.querySelector(".characterName");
+
+nameInput.addEventListener("keyup", function() {
+    const name = document.querySelector('.characterName').value;
+    document.querySelector(".custom_name_box").innerText = name;
+})

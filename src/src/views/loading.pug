@@ -1,14 +1,33 @@
 doctype html
 html(lang="ko")
     head
-        title 로딩 페이지
+        title worryburry loading
         link(rel="stylesheet", href="/static/css/styles.css")
-    body(id="home")
-        main
-            div(class="Character")
-                img(class="Character_spritesheet pixelart", src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/21542/DemoRpgCharacterShadow.png")
-                img(class="Character_spritesheet pixelart face-down", src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/21542/DemoRpgCharacter.png")
-            div(class="color-controls")
-                p(id="loading_start") 시작하기
-        script(src="http://code.jquery.com/jquery-latest.js")
-        script(src="/static/js/loading.js")
+
+    body(id="loading_body")
+        <div class="loading_header_div">
+            div(class="loading_header")
+                div(class="menu-circle" style=" cursor: pointer;" onclick="location.href='#';")
+        </div>
+        <div class="loading_items_line">
+            main(class="loading_main")
+                div(class="loading_Title")
+                    img(class="loading_title_img", src="home_title.png")
+                div(class="loading_Character1")
+                    img(class="loading_Character_spritesheet pixelart", src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/21542/DemoRpgCharacterShadow.png")
+                    img(class="loading_Character_spritesheet pixelart face-down", src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/21542/DemoRpgCharacter.png")
+                
+                div(class="loading_color-controls" style = backgroundc )
+                    ul(id="loading_ul")
+                        li(id="loading_1") 걱정인형을 다 만들었구나!      
+                        li(id="loading_2") 이제부터 너의 걱정인형과 함께 이야기를 나누어 볼 거야.            
+                        li(id="loading_3") 지금 바로 만나보도록 하자!       
+                        li(id="loading_4")  
+                    p(class="loading_typing")
+                    p(id="loading_start") 마음의 준비가 되었다면 클릭해!
+        <div>
+        div(id="stv" class="staticleft")
+        div(id="stv" class="staticright")   
+    script(src="http://code.jquery.com/jquery-latest.js")
+    script(src="/static/js/loading.js")
+        

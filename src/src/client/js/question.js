@@ -1,5 +1,5 @@
 var checkIdx = 1;
-var typingTxt = "안녕 만나서 반가워😊. \n 내가 널 뭐라고 부르면 될까? \n";
+var typingTxt = "안녕 만나서 반가워😊. \n 나는 널 뭐라고 부르면 될까? \n";
 var typingIdx = 0;
 const text = document.querySelector(".question_typing");
 
@@ -50,7 +50,9 @@ function firstTyping() {
 var nameAnswerBool = false;
 function createNameAnswer() {
     if (nameAnswerBool === false) {
-        const name = document.querySelector("#name");
+        document.querySelector(".question_typing_div").style.marginBottom = "0px";
+        document.querySelector(".question_blank").style.display = "block";
+        const name = document.querySelector("#question_name");
         name.style.display = "inline-block";
         nameAnswerBool = true;
     }
@@ -58,15 +60,17 @@ function createNameAnswer() {
 
 var nameResult = "";
 var characterName = "";
-const nameAnswer = document.querySelector("#name");
+const nameAnswer = document.querySelector("#question_name");
 nameAnswer.addEventListener('keypress', function (key) {
     if (key.key == 'Enter') {
+        document.querySelector(".question_typing_div").style.marginBottom = "20px";
+        document.querySelector(".question_blank").style.display = "none";
         nameResult = nameAnswer.value;
         characterName = $("#question_character").text();
         nameAnswer.remove();
         const character = document.querySelector(".question_pixelart");
         character.classList.add("question_face-right");
-        typingTxt = nameResult + "? 좋아. \n 난 편하게 " + characterName + "(이)라고 불러줘😎 \n 오늘 뭐 타고 왔어? \n";
+        typingTxt = nameResult + "? 좋아. \n 난 너만의 걱정인형 " + characterName + "(이)야😎 \n 오늘 뭐 타고 왔어? \n";
         typingIdx = 0;
         text.innerHTML = "";
         var tysecond = setInterval(secondTyping, 100);
@@ -95,20 +99,24 @@ function secondTyping() {
 var trafficAnswerBool = false;
 function createTrafficAnswer() {
     if (trafficAnswerBool === false) {
-        const traffic = document.querySelector("#traffic");
+        document.querySelector(".question_typing_div").style.marginBottom = "0px";
+        document.querySelector(".question_blank").style.display = "block";
+        const traffic = document.querySelector("#question_traffic");
         traffic.style.display = "inline-block";
         trafficAnswerBool = true;
     }
 }
 
-const trafficAnswer = document.querySelector("#traffic");
+const trafficAnswer = document.querySelector("#question_traffic");
 trafficAnswer.addEventListener('keypress', function (key) {
     if (key.key == 'Enter') {
+        document.querySelector(".question_typing_div").style.marginBottom = "20px";
+        document.querySelector(".question_blank").style.display = "none";
         trafficAnswer.remove();
         const character = document.querySelector(".question_pixelart");
         character.classList.remove("question_face-right");
         character.classList.add("question_face-left");
-        typingTxt = "그랬구나. 와줘서 정말 고마워! 🤲 \n" + nameResult + "! 넌 멘탈이 강한 편이야?"
+        typingTxt = "그랬구나. 와줘서 정말 고마워! 🤲 \n" + nameResult + "! 뜬금없지만 평소에 넌 멘탈이 강한 편이야?"
         typingIdx = 0;
         text.innerHTML = "";
         tythird = setInterval(thirdTyping, 100);
@@ -140,7 +148,9 @@ function createThirdAnswer() {
     if (thirdAnswerBool === false) {
         document.querySelector(".question_typing").style.display = "none";
         const first = document.createElement("p");
+        const blank = document.createElement("br");
         const second = document.createElement("p");
+        const blank2 = document.createElement("br");
         const third = document.createElement("p");
         first.setAttribute("class", "answer1");
         second.setAttribute("class", "answer1");
@@ -148,14 +158,18 @@ function createThirdAnswer() {
         first.textContent = "그래도 대체로 강한 편인 것 같아";
         second.textContent = "사실 좀 유리 멘탈인 것 같아..";
         third.textContent = "상황에 따라 되게 달라지는 것 같아";
-        const controls = document.querySelector(".color-controls");
+        const controls = document.querySelector(".question_color-controls");
         controls.appendChild(first);
+        controls.appendChild(blank);
         controls.appendChild(second);
+        controls.appendChild(blank2);
         controls.appendChild(third);
 
         first.addEventListener("click", function () {
             controls.removeChild(first);
+            controls.removeChild(blank);
             controls.removeChild(second);
+            controls.removeChild(blank2);
             controls.removeChild(third);
             document.querySelector(".question_typing").style.display = "inline-block";
             messageForClient = "누구보다 강인한 멘탈을 가진 " + nameResult + "! 나 " + characterName + "! \n";
@@ -165,7 +179,9 @@ function createThirdAnswer() {
         })
         second.addEventListener("click", function () {
             controls.removeChild(first);
+            controls.removeChild(blank);
             controls.removeChild(second);
+            controls.removeChild(blank2);
             controls.removeChild(third);
             document.querySelector(".question_typing").style.display = "inline-block";
             messageForClient = "스스로 약한 멘탈을 갖고 있다고 말했지만, 그 속에 강인함을 감추고 있는 " + nameResult + "! 나 " + characterName + "! \n";
@@ -175,7 +191,9 @@ function createThirdAnswer() {
         })
         third.addEventListener("click", function () {
             controls.removeChild(first);
+            controls.removeChild(blank);
             controls.removeChild(second);
+            controls.removeChild(blank2);
             controls.removeChild(third);
             document.querySelector(".question_typing").style.display = "inline-block";
             messageForClient = "누구보다 상황을 유연하게 맞이하려고 하는 " + nameResult + ". 나 " + characterName + "! \n";
@@ -221,7 +239,7 @@ function createFourAnswer() {
         first.textContent = "항상 사람들이 날 힘들게 하는 것 같아";
         second.textContent = "어떤 상황이 날 힘들게 하는 경우가 많았어";
         third.textContent = "복합적인 이유가 있는 것 같아";
-        const controls = document.querySelector(".color-controls");
+        const controls = document.querySelector(".question_color-controls");
         controls.appendChild(first);
         controls.appendChild(second);
         controls.appendChild(third);
@@ -290,7 +308,7 @@ function createFiveAnswer() {
         second.setAttribute("class", "answer3");
         first.textContent = "음.. 있었어 아직도 생생하게 기억나";
         second.textContent = "힘들었던 건 금방 털어버리는 편이라, 잘 생각은 안 나";
-        const controls = document.querySelector(".color-controls");
+        const controls = document.querySelector(".question_color-controls");
         controls.appendChild(first);
         controls.appendChild(second);
 
@@ -329,16 +347,20 @@ function sixTyping() {
 var worryAnswerBool = false;
 function createWorryAnswer() {
     if (worryAnswerBool === false) {
-        const worry = document.querySelector("#worry");
+        document.querySelector(".question_typing_div").style.marginBottom = "0px";
+        document.querySelector(".question_blank").style.display = "block";
+        const worry = document.querySelector("#question_worry");
         worry.style.display = "inline-block";
         worryAnswerBool = true;
     }
 }
 
 var middleAnswer;
-const worryAnswer = document.querySelector("#worry");
+const worryAnswer = document.querySelector("#question_worry");
 worryAnswer.addEventListener('keypress', function (key) {
     if (key.key == 'Enter') {
+        document.querySelector(".question_typing_div").style.marginBottom = "20px";
+        document.querySelector(".question_blank").style.display = "none";
         middleAnswer = worryAnswer.value;
         worryAnswer.remove();
         text.innerHTML = "";
@@ -418,7 +440,7 @@ function createNewAnswer() {
         second.setAttribute("class", "answer3");
         first.textContent = "아니. 스스로 해결하는 편이 더 낫다고 생각해.";
         second.textContent = "응. 이야기를 하다 보면 마음의 짐이 좀 덜어지는 것 같기도 해.";
-        const controls = document.querySelector(".color-controls");
+        const controls = document.querySelector(".question_color-controls");
         controls.appendChild(first);
         controls.appendChild(second);
 
@@ -469,16 +491,20 @@ function eightTyping() {
 var lastAnswerBool = false;
 function createLastAnswer() {
     if (lastAnswerBool === false) {
-        const last = document.querySelector("#last");
+        document.querySelector(".question_typing_div").style.marginBottom = "0px";
+        document.querySelector(".question_blank").style.display = "block";
+        const last = document.querySelector("#question_last");
         last.style.display = "inline-block";
         lastAnswerBool = true;
     }
 }
 
-const lastAnswer = document.querySelector("#last");
+const lastAnswer = document.querySelector("#question_last");
 var lastMessage = ""
 lastAnswer.addEventListener('keypress', function (key) {
     if (key.key == 'Enter') {
+        document.querySelector(".question_typing_div").style.marginBottom = "20px";
+        document.querySelector(".question_blank").style.display = "none";
         lastMessage = lastAnswer.value;
         lastAnswer.remove();
         text.innerHTML = "";
@@ -551,6 +577,7 @@ function saveClientData() {
             "clientmessage": messageForClient,
             "userName": nameResult,
             "name": characterName,
+            "catagory" : categoryName,
         },
         dataType: "JSON",
         async: true,
@@ -563,13 +590,15 @@ function createTenAnswer() {
     if (tenAnswerBool === false) {
         document.querySelector(".question_typing").style.display = "none";
         const first = document.createElement("p");
+        const blank = document.createElement("br");
         const second = document.createElement("p");
         first.setAttribute("class", "answer3");
         second.setAttribute("class", "answer3");
         first.textContent = "좋아!";
         second.textContent = "아니 언제 그런걸 준비했어,,^^ 그래!";
-        const controls = document.querySelector(".color-controls");
+        const controls = document.querySelector(".question_color-controls");
         controls.appendChild(first);
+        controls.appendChild(blank);
         controls.appendChild(second);
 
         first.addEventListener("click", function () {

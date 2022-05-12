@@ -4,6 +4,7 @@ import homeRouter from "./routers/homeRouter";
 import questionRouter from "./routers/questionRouter";
 import letterRouter from "./routers/letterRouter";
 import loadingRouter from "./routers/loadingRouter";
+import nftPageRouter from "./routers/nftPageRouter";
 
 const app = express();
 
@@ -15,6 +16,7 @@ app.use(express.static('image'));
 app.use("/static", express.static("assets"));
 app.use("/uploads", express.static("uploads"));
 
+app.use("/nftpage", nftPageRouter);
 app.use("/loading", loadingRouter);
 app.use("/letter", letterRouter);
 app.use("/", homeRouter);

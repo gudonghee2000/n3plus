@@ -8,6 +8,7 @@ const customSchema = new mongoose.Schema({
     url: String,
     username: String,
     message: String,
+    categorys: {type: String, default: "없음"},
 })
 
 customSchema.plugin(autoIncrement.plugin,{ 

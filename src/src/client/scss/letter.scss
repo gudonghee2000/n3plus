@@ -1,8 +1,49 @@
 #letter_body {
-    height: 100%;
+    padding-top: 0;
+}
+
+.letter_header {
+    margin-left: 22.5%;
     display: flex;
-    justify-content: center;
     align-items: center;
+    flex-shrink: 0;
+    height: 45px;
+    width: 55.0%;
+    background-color: rgba(54, 54, 54, 0.8);
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 15px 15px 0px 0px;
+    border-color: black;
+}
+
+.letter_items_line {
+    margin-left: 22.5%;
+    padding-bottom: 317px;
+    width: 55.0%;
+    border-style: solid;
+    border-width: 5px;
+    border-top-width: 0px;
+    border-radius: 0px 0px 15px 15px;
+    border-color: black;
+}
+
+.letter_container {
+    padding-top: calc(var(--pixel-size) * 18px);
+}
+
+.letter_title {
+    width: auto;
+   position: relative;
+   display: block;
+   margin: auto;
+   margin-top: -20px;
+}
+
+.letter_title_inbox {
+    width: calc(var(--pixel-size) * 55px);
+   display: block;
+   margin: auto;
+   margin-top: -70px;
 }
 
 .overlay {
@@ -32,6 +73,9 @@
     align-items: center;
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: black;
 }
 
 .popup .content {
@@ -48,8 +92,9 @@
     height: 45px;
     width: 100%;
     background-color: rgba(54, 54, 54, 0.8);
-    border-bottom: 1px solid rgba(113 119 144 / 25%);
+    border-bottom: 5px solid rgba(113 119 144 / 25%);
     border-radius: 15px 15px 0px 0px;
+    border-color: black;
 }
 
 .menu-circle {
@@ -62,8 +107,20 @@
     flex-shrink: 0;
 }
 
+.letter_menu-circle {
+    margin-top: 48px;
+    width: 15px;
+    height: 15px;
+    background-color: #f96057;
+    border-radius: 50%;
+    box-shadow: 24px 0 0 0 #f8ce52, 48px 0 0 0 #5fcf65;
+    margin-left: 20px;
+    flex-shrink: 0;
+}
+
 .wave-effect {
-    position: absolute;
+    position: relative;
+    margin: 0 auto;
     top: 40%;
     display: flex;
     flex-direction: row;
@@ -74,6 +131,7 @@
     border-radius: 100%;
     background: #FFFFFF;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
+    margin-top: 90px;
 }
 
 .wave-effect span {
@@ -98,7 +156,7 @@
     border: 8px solid rgba(0, 0, 0, 0.2);
     border-radius: 100%;
     animation-name: ripple;
-    animation-duration: 3s;
+    animation-duration: 0.3s;
     animation-delay: 0s;
     animation-iteration-count: infinite;
     animation-timing-function: cubic-bezier(0.65, 0, 0.34, 1);
@@ -122,8 +180,8 @@
     border: 8px solid rgba(0, 0, 0, 0.2);
     border-radius: 100%;
     animation-name: ripple;
-    animation-duration: 3s;
-    animation-delay: 0.5s;
+    animation-duration: 0.3s;
+    animation-delay: 0s;
     animation-iteration-count: infinite;
     animation-timing-function: cubic-bezier(0.65, 0, 0.34, 1);
     z-index: -1;
@@ -141,3 +199,44 @@
     }
 }
 
+.letter_character {
+    touch-action: manipulation;
+    width: calc(var(--pixel-size) * 32px);
+    height: calc(var(--pixel-size) * 32px);
+    overflow: hidden;
+    position: relative;
+    margin: calc(var(--pixel-size) * 6px) auto;
+}
+
+
+.letter_character_spritesheet {
+    -webkit-animation: walkAnimation 1.5s steps(4) infinite;
+    animation: walkAnimation 1.5s steps(4) infinite;
+    display: block;
+    touch-action: manipulation;
+    width: calc(var(--pixel-size) * 128px);
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+@-webkit-keyframes walkAnimation {
+    from {
+        transform: translate3d(0%, 0%, 0);
+    }
+
+    to {
+        transform: translate3d(-100%, 0%, 0);
+    }
+}
+
+@keyframes walkAnimation {
+    from {
+        transform: translate3d(0%, 0%, 0);
+    }
+
+    to {
+        transform: translate3d(-100%, 0%, 0);
+    }
+}
