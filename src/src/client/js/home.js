@@ -1,12 +1,4 @@
-var audio = new Audio();
-audio.src = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/Lecrae_-_Anomaly_(Lyric_Video).mp3';
-audio.volume = 0.5;
-audio.play();
 
-audio.addEventListener('ended', function() { 
-    this.currentTime = 0;
-    this.play();
-}, false);
 
 var typingBool = false;
 var buttonBool = false;
