@@ -6,6 +6,7 @@
   font-style: normal;
 }
 #home {
+  touch-action: manipulation;
   display: flex;
   align-items: baseline;
   justify-content: center;
@@ -17,6 +18,7 @@
 }
 
 .layer {
+  touch-action: manipulation;
   background-color: rgba(255, 255, 255, 0.4);
   position: absolute;
   top: 0;
@@ -26,6 +28,7 @@
 }
 
 .Title {
+  touch-action: manipulation;
   width: auto;
   position: relative;
   display: block;
@@ -34,6 +37,7 @@
 }
 
 .home_title {
+  touch-action: manipulation;
   width: calc(var(--pixel-size) * 80px);
   display: block;
   margin: auto;
@@ -41,6 +45,7 @@
 }
 
 .Character1 {
+  touch-action: manipulation;
   width: calc(32px * var(--pixel-size1));
   height: calc(32px * var(--pixel-size1));
   position: relative;
@@ -50,18 +55,21 @@
 }
 
 .Character_spritesheet {
+  touch-action: manipulation;
   animation: moveSpritesheet 1s steps(4) infinite;
   width: calc(128px * var(--pixel-size1));
   position: absolute;
 }
 
 .Character_shadow {
+  touch-action: manipulation;
   position: absolute;
   width: calc(32px * var(--pixel-size1));
   height: calc(32px * var(--pixel-size1));
 }
 
 .pixelart {
+  touch-action: manipulation;
   image-rendering: pixelated;
 }
 
@@ -86,6 +94,7 @@
   }
 }
 .home_color-controls {
+  touch-action: manipulation;
   position: absolute;
   z-index: 99;
   left: 50%;
@@ -103,10 +112,12 @@
   color: #555;
 }
 .home_color-controls ul {
+  touch-action: manipulation;
   display: none;
   list-style: none;
 }
 .home_color-controls .typing {
+  touch-action: manipulation;
   font-family: "Pokemon GB", monospace;
   font-weight: 400;
   font-size: 20px;
@@ -130,6 +141,7 @@
   }
 }
 .home_color-controls #start {
+  touch-action: manipulation;
   font-family: "Pokemon GB", monospace;
   font-weight: 400;
   font-size: 20px;
@@ -142,6 +154,7 @@
   -webkit-animation: fadein 2s;
 }
 .home_color-controls #realStart {
+  touch-action: manipulation;
   font-family: "Pokemon GB", monospace;
   font-weight: 400;
   font-size: 20px;
@@ -193,6 +206,7 @@
   }
 }
 .walk {
+  touch-action: manipulation;
   -webkit-animation: walkAnimation 1.5s steps(4) infinite;
   animation: walkAnimation 1.5s steps(4) infinite;
   display: block;
@@ -430,11 +444,13 @@ body {
 }
 
 .Container {
+  touch-action: manipulation;
   max-width: calc(var(--pixel-size) * 100px);
   margin: 0 auto;
 }
 
 .custom_header {
+  touch-action: manipulation;
   margin-left: 22.5%;
   display: flex;
   align-items: center;
@@ -449,6 +465,7 @@ body {
 }
 
 .custom_items_line {
+  touch-action: manipulation;
   margin-left: 22.5%;
   padding-bottom: 122px;
   width: 55%;
@@ -460,6 +477,7 @@ body {
 }
 
 .TitleImage {
+  touch-action: manipulation;
   width: calc(var(--pixel-size) * 55px);
   display: block;
   margin: auto;
@@ -467,6 +485,7 @@ body {
 }
 
 .Bubble {
+  touch-action: manipulation;
   -webkit-appearance: none;
   width: calc(var(--pixel-size) * 3px);
   height: calc(var(--pixel-size) * 3px);
@@ -481,14 +500,17 @@ body {
 }
 
 .NavigationBubble:hover:not(.active) {
+  touch-action: manipulation;
   opacity: 0.9;
 }
 
 .NavigationBubble.active {
+  touch-action: manipulation;
   background: #fff;
 }
 
 .NextSpritesheetButton {
+  touch-action: manipulation;
   -webkit-appearance: none;
   border: 0;
   background: none;
@@ -553,20 +575,24 @@ body {
 }
 
 .NextSpritesheetButton:hover {
+  touch-action: manipulation;
   cursor: pointer;
   background: rgba(255, 255, 255, 0.2);
 }
 
 .NextSpritesheetButton:focus {
+  touch-action: manipulation;
   outline: none;
 }
 
 .NextSpritesheetButton svg {
+  touch-action: manipulation;
   display: block;
   width: calc(var(--pixel-size) * 4px);
 }
 
 .DirectionArrow {
+  touch-action: manipulation;
   background: none;
   outline: 0;
   border: 0;
@@ -574,6 +600,7 @@ body {
 }
 
 .DirectionArrow svg {
+  touch-action: manipulation;
   display: block;
   width: calc(var(--pixel-size) * 13px);
 }
@@ -608,17 +635,20 @@ body {
 
 /* 하영변경 */
 .SpritesheetSlider {
+  touch-action: manipulation;
   position: relative;
   /*margin-bottom: calc(var(--pixel-size) * 30px);*/
 }
 
 .flex-center {
+  touch-action: manipulation;
   display: flex;
   justify-content: center;
 }
 
 /*하영수정 - 버튼*/
 .btn {
+  touch-action: manipulation;
   position: relative;
   width: 35px;
   margin: 10px 0px 15px 0px;
@@ -629,6 +659,7 @@ body {
 
 /*하영추가 - 버튼 디자인*/
 .btn:hover {
+  touch-action: manipulation;
   cursor: pointer;
   color: #fff;
   background-color: #a3a3a3;
@@ -660,6 +691,7 @@ body {
 }
 
 .card-container {
+  touch-action: manipulation;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -670,6 +702,7 @@ body {
 
 /* 하영추가 - 이름입력 */
 .characterName {
+  touch-action: manipulation;
   position: relative;
   font-size: larger;
   text-align: center;
@@ -685,6 +718,7 @@ body {
 
 /* 하영추가 - 버튼 */
 .new-btn {
+  touch-action: manipulation;
   display: flex;
   font-size: medium;
   justify-content: center;
@@ -698,12 +732,14 @@ body {
 
 /* 하영추가 - 버튼 디자인*/
 .new-btn:hover {
+  touch-action: manipulation;
   cursor: pointer;
   color: #fff;
   background-color: #4c4c4c;
 }
 
 .staticleft {
+  touch-action: manipulation;
   content: "";
   position: absolute;
   background-color: rgb(0, 0, 0);
@@ -715,6 +751,7 @@ body {
 }
 
 .staticright {
+  touch-action: manipulation;
   content: "";
   position: absolute;
   background-color: rgb(0, 0, 0);
@@ -746,6 +783,7 @@ body {
   }
 }
 .lefttv {
+  touch-action: manipulation;
   content: "";
   position: absolute;
   background-color: rgb(0, 0, 0);
@@ -757,6 +795,7 @@ body {
 }
 
 .righttv {
+  touch-action: manipulation;
   content: "";
   position: absolute;
   background-color: rgb(0, 0, 0);
@@ -788,14 +827,17 @@ body {
   }
 }
 .custom_body {
+  touch-action: manipulation;
   padding-top: 0;
 }
 
 ::-webkit-scrollbar {
+  touch-action: manipulation;
   display: none;
 }
 
 .custom_container {
+  touch-action: manipulation;
   padding-top: calc(var(--pixel-size) * 18px);
 }
 
@@ -804,6 +846,7 @@ body {
 }
 
 .question_body {
+  touch-action: manipulation;
   padding-top: 0;
 }
 .question_body ::-webkit-scrollbar {
@@ -811,6 +854,7 @@ body {
 }
 
 .question_header {
+  touch-action: manipulation;
   margin-left: 22.5%;
   display: flex;
   align-items: center;
@@ -825,10 +869,12 @@ body {
 }
 
 .question_main {
+  touch-action: manipulation;
   padding-top: calc(var(--pixel-size) * 18px);
 }
 
 .question_items_line {
+  touch-action: manipulation;
   margin-left: 22.5%;
   padding-bottom: 253px;
   width: 55%;
@@ -840,6 +886,7 @@ body {
 }
 
 .question_Title {
+  touch-action: manipulation;
   width: auto;
   position: relative;
   display: block;
@@ -848,6 +895,7 @@ body {
 }
 
 .question_title_img {
+  touch-action: manipulation;
   width: calc(var(--pixel-size) * 55px);
   display: block;
   margin: auto;
@@ -855,10 +903,12 @@ body {
 }
 
 ul {
+  touch-action: manipulation;
   display: none;
 }
 
 .question_character {
+  touch-action: manipulation;
   width: calc(var(--pixel-size) * 32px);
   height: calc(var(--pixel-size) * 32px);
   overflow: hidden;
@@ -867,12 +917,14 @@ ul {
 }
 
 .question_character_spritesheet {
+  touch-action: manipulation;
   animation: moveSpritesheet 1s steps(4) infinite;
   width: calc(128px * var(--pixel-size));
   position: absolute;
 }
 
 .question_pixelart {
+  touch-action: manipulation;
   image-rendering: pixelated;
 }
 
@@ -897,6 +949,7 @@ ul {
   }
 }
 .question_color-controls {
+  touch-action: manipulation;
   position: absolute;
   z-index: 99;
   left: 50%;
@@ -915,6 +968,7 @@ ul {
 }
 
 #question_name {
+  touch-action: manipulation;
   font-family: "Pokemon GB", monospace;
   font-weight: 400;
   font-size: 20px;
@@ -925,6 +979,7 @@ ul {
 }
 
 #question_traffic {
+  touch-action: manipulation;
   font-family: "Pokemon GB", monospace;
   font-weight: 400;
   font-size: 20px;
@@ -935,6 +990,7 @@ ul {
 }
 
 #question_worry {
+  touch-action: manipulation;
   font-family: "Pokemon GB", monospace;
   font-weight: 400;
   font-size: 20px;
@@ -945,6 +1001,7 @@ ul {
 }
 
 #question_last {
+  touch-action: manipulation;
   font-family: "Pokemon GB", monospace;
   font-weight: 400;
   font-size: 20px;
@@ -955,6 +1012,7 @@ ul {
 }
 
 .answer1 {
+  touch-action: manipulation;
   font-family: "Pokemon GB", monospace;
   font-weight: 400;
   font-size: 20px;
@@ -968,6 +1026,7 @@ ul {
 }
 
 .answer2 {
+  touch-action: manipulation;
   font-family: "Pokemon GB", monospace;
   font-weight: 400;
   font-size: 20px;
@@ -981,6 +1040,7 @@ ul {
 }
 
 .answer3 {
+  touch-action: manipulation;
   font-family: "Pokemon GB", monospace;
   font-weight: 400;
   font-size: 20px;
@@ -994,6 +1054,7 @@ ul {
 }
 
 .answer4 {
+  touch-action: manipulation;
   font-family: "Pokemon GB", monospace;
   font-weight: 400;
   font-size: 20px;
@@ -1029,6 +1090,7 @@ ul {
 }
 
 .textinput {
+  touch-action: manipulation;
   padding-left: 5px;
   outline: none;
   min-width: 50px;
@@ -1043,11 +1105,13 @@ ul {
 }
 
 .textinput:focus {
+  touch-action: manipulation;
   border-color: #3d3d3d;
 }
 
 /* 여기까지 복사 */
 #question_lastAnswer {
+  touch-action: manipulation;
   font-family: "Pokemon GB", monospace;
   font-weight: 400;
   font-size: 20px;
@@ -1059,6 +1123,7 @@ ul {
 }
 
 .question_typing {
+  touch-action: manipulation;
   font-family: "Pokemon GB", monospace;
   font-weight: 400;
   font-size: 20px;
@@ -1079,6 +1144,7 @@ ul {
   }
 }
 .question_blank {
+  touch-action: manipulation;
   width: 0;
   height: 0;
   margin: 0;
@@ -1086,14 +1152,17 @@ ul {
 }
 
 .question_typing_div {
+  touch-action: manipulation;
   margin-bottom: 20px;
 }
 
 #letter_body {
+  touch-action: manipulation;
   padding-top: 0;
 }
 
 .letter_header {
+  touch-action: manipulation;
   margin-left: 22.5%;
   display: flex;
   align-items: center;
@@ -1108,6 +1177,7 @@ ul {
 }
 
 .letter_items_line {
+  touch-action: manipulation;
   margin-left: 22.5%;
   padding-bottom: 317px;
   width: 55%;
@@ -1119,10 +1189,12 @@ ul {
 }
 
 .letter_container {
+  touch-action: manipulation;
   padding-top: calc(var(--pixel-size) * 18px);
 }
 
 .letter_title {
+  touch-action: manipulation;
   width: auto;
   position: relative;
   display: block;
@@ -1131,6 +1203,7 @@ ul {
 }
 
 .letter_title_inbox {
+  touch-action: manipulation;
   width: calc(var(--pixel-size) * 55px);
   display: block;
   margin: auto;
@@ -1138,6 +1211,7 @@ ul {
 }
 
 .overlay {
+  touch-action: manipulation;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -1150,11 +1224,13 @@ ul {
 }
 
 .overlay:target {
+  touch-action: manipulation;
   visibility: visible;
   opacity: 1;
 }
 
 .popup {
+  touch-action: manipulation;
   margin: 70px auto;
   background: #fff;
   border-radius: 15px 15px 5px 5px;
@@ -1170,12 +1246,14 @@ ul {
 }
 
 .popup .content {
+  touch-action: manipulation;
   padding: 20px;
   max-height: 30%;
   overflow: auto;
 }
 
 .header {
+  touch-action: manipulation;
   padding-bottom: 50px;
   display: flex;
   align-items: center;
@@ -1189,6 +1267,7 @@ ul {
 }
 
 .menu-circle {
+  touch-action: manipulation;
   width: 15px;
   height: 15px;
   background-color: #f96057;
@@ -1199,6 +1278,7 @@ ul {
 }
 
 .letter_menu-circle {
+  touch-action: manipulation;
   margin-top: 48px;
   width: 15px;
   height: 15px;
@@ -1210,6 +1290,7 @@ ul {
 }
 
 .wave-effect {
+  touch-action: manipulation;
   position: relative;
   margin: 0 auto;
   top: 40%;
@@ -1226,11 +1307,13 @@ ul {
 }
 
 .wave-effect span {
+  touch-action: manipulation;
   position: relative;
   font-size: 74px;
 }
 
 .wave-effect::after {
+  touch-action: manipulation;
   opacity: 0;
   display: flex;
   flex-direction: row;
@@ -1255,6 +1338,7 @@ ul {
 }
 
 .wave-effect::before {
+  touch-action: manipulation;
   opacity: 0;
   display: flex;
   flex-direction: row;
@@ -1298,6 +1382,7 @@ ul {
 }
 
 .letter_character_spritesheet {
+  touch-action: manipulation;
   -webkit-animation: walkAnimation 1.5s steps(4) infinite;
   animation: walkAnimation 1.5s steps(4) infinite;
   display: block;
@@ -1325,6 +1410,7 @@ ul {
   }
 }
 #loading_body {
+  touch-action: manipulation;
   padding-top: 0;
 }
 #loading_body ::-webkit-scrollbar {
@@ -1332,6 +1418,7 @@ ul {
 }
 
 .loading_header {
+  touch-action: manipulation;
   margin-left: 22.5%;
   display: flex;
   align-items: center;
@@ -1346,6 +1433,7 @@ ul {
 }
 
 .loading_layer {
+  touch-action: manipulation;
   background-color: rgba(255, 255, 255, 0.4);
   position: absolute;
   top: 0;
@@ -1360,6 +1448,7 @@ ul {
 }
 
 .loading_Title {
+  touch-action: manipulation;
   width: auto;
   position: relative;
   display: block;
@@ -1368,6 +1457,7 @@ ul {
 }
 
 .loading_title_img {
+  touch-action: manipulation;
   width: calc(var(--pixel-size) * 55px);
   display: block;
   margin: auto;
@@ -1375,6 +1465,7 @@ ul {
 }
 
 .loading_Character1 {
+  touch-action: manipulation;
   width: calc(32px * var(--pixel-size2));
   height: calc(32px * var(--pixel-size2));
   position: relative;
@@ -1384,18 +1475,21 @@ ul {
 }
 
 .loading_Character_spritesheet {
+  touch-action: manipulation;
   animation: moveSpritesheet 1s steps(4) infinite;
   width: calc(128px * var(--pixel-size2));
   position: absolute;
 }
 
 .loading_Character_shadow {
+  touch-action: manipulation;
   position: absolute;
   width: calc(32px * var(--pixel-size2));
   height: calc(32px * var(--pixel-size2));
 }
 
 .loading_color-controls {
+  touch-action: manipulation;
   position: absolute;
   z-index: 99;
   left: 50%;
@@ -1413,10 +1507,12 @@ ul {
   color: #555;
 }
 .loading_color-controls ul {
+  touch-action: manipulation;
   display: none;
   list-style: none;
 }
 .loading_color-controls .loading_typing {
+  touch-action: manipulation;
   font-family: "Pokemon GB", monospace;
   font-weight: 400;
   font-size: 20px;
@@ -1440,6 +1536,7 @@ ul {
   }
 }
 .loading_color-controls #loading_start {
+  touch-action: manipulation;
   font-family: "Pokemon GB", monospace;
   font-weight: 400;
   font-size: 20px;
@@ -1452,6 +1549,7 @@ ul {
   -webkit-animation: fadein 2s;
 }
 .loading_color-controls #loading_restart {
+  touch-action: manipulation;
   font-family: "Pokemon GB", monospace;
   font-weight: 400;
   font-size: 20px;
@@ -1466,10 +1564,12 @@ ul {
 }
 
 .loading_main {
+  touch-action: manipulation;
   padding-top: calc(var(--pixel-size2) * 18px);
 }
 
 .loading_items_line {
+  touch-action: manipulation;
   margin-left: 22.5%;
   padding-bottom: 156px;
   width: 55%;

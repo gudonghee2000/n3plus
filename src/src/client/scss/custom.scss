@@ -44,6 +44,7 @@
 }
 
 .walk {
+  touch-action: manipulation;
   -webkit-animation: walkAnimation 1.5s steps(4) infinite;
   animation: walkAnimation 1.5s steps(4) infinite;
   display: block;
@@ -281,11 +282,13 @@ body {
 }
 
 .Container {
+  touch-action: manipulation;
   max-width: calc(var(--pixel-size) * 100px);
   margin: 0 auto;
 }
 
 .custom_header {
+  touch-action: manipulation;
   margin-left: 22.5%;
   display: flex;
   align-items: center;
@@ -300,6 +303,7 @@ body {
 }
 
 .custom_items_line {
+  touch-action: manipulation;
   margin-left: 22.5%;
   padding-bottom: 122px;
   width: 55.0%;
@@ -312,6 +316,7 @@ body {
 
 
 .TitleImage {
+  touch-action: manipulation;
   width: calc(var(--pixel-size) * 55px);
   display: block;
   margin: auto;
@@ -319,6 +324,7 @@ body {
 }
 
 .Bubble {
+  touch-action: manipulation;
   -webkit-appearance: none;
   width: calc(var(--pixel-size) * 3px);
   height: calc(var(--pixel-size) * 3px);
@@ -333,14 +339,17 @@ body {
 }
 
 .NavigationBubble:hover:not(.active) {
+  touch-action: manipulation;
   opacity: 0.9;
 }
 
 .NavigationBubble.active {
+  touch-action: manipulation;
   background: #fff;
 }
 
 .NextSpritesheetButton {
+  touch-action: manipulation;
   -webkit-appearance: none;
   border: 0;
   background: none;
@@ -405,20 +414,24 @@ body {
 }
 
 .NextSpritesheetButton:hover {
+  touch-action: manipulation;
   cursor: pointer;
   background: rgba(255, 255, 255, 0.2);
 }
 
 .NextSpritesheetButton:focus {
+  touch-action: manipulation;
   outline: none;
 }
 
 .NextSpritesheetButton svg {
+  touch-action: manipulation;
   display: block;
   width: calc(var(--pixel-size) * 4px);
 }
 
 .DirectionArrow {
+  touch-action: manipulation;
   background: none;
   outline: 0;
   border: 0;
@@ -426,6 +439,7 @@ body {
 }
 
 .DirectionArrow svg {
+  touch-action: manipulation;
   display: block;
   width: calc(var(--pixel-size) * 13px);
 }
@@ -460,17 +474,20 @@ body {
 
 /* 하영변경 */
 .SpritesheetSlider {
+  touch-action: manipulation;
   position: relative;
   /*margin-bottom: calc(var(--pixel-size) * 30px);*/
 }
 
 .flex-center {
+  touch-action: manipulation;
   display: flex;
   justify-content: center;
 }
 
 /*하영수정 - 버튼*/
 .btn {
+  touch-action: manipulation;
   position: relative;
   width: 35px;
   margin: 10px 0px 15px 0px;
@@ -481,6 +498,7 @@ body {
 
 /*하영추가 - 버튼 디자인*/
 .btn:hover {
+  touch-action: manipulation;
   cursor: pointer;
   color: #fff;
   background-color: #a3a3a3;
@@ -512,6 +530,7 @@ body {
 }
 
 .card-container {
+  touch-action: manipulation;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -524,6 +543,7 @@ body {
 
 /* 하영추가 - 이름입력 */
 .characterName {
+  touch-action: manipulation;
   position: relative;
   font-size: larger;
   text-align: center;
@@ -540,6 +560,7 @@ body {
 
 /* 하영추가 - 버튼 */
 .new-btn {
+  touch-action: manipulation;
   display: flex;
   font-size: medium;
   justify-content: center;
@@ -553,6 +574,7 @@ body {
 
 /* 하영추가 - 버튼 디자인*/
 .new-btn:hover {
+  touch-action: manipulation;
   cursor: pointer;
   color: #fff;
   background-color: #4c4c4c;
@@ -560,6 +582,7 @@ body {
 
 
 .staticleft {
+  touch-action: manipulation;
   content: "";
   position: absolute;
   background-color: rgba(0, 0, 0, 1);
@@ -572,6 +595,7 @@ body {
 }
 
 .staticright {
+  touch-action: manipulation;
   content: "";
   position: absolute;
   background-color: rgba(0, 0, 0, 1);
@@ -610,6 +634,7 @@ body {
 }
 
 .lefttv {
+  touch-action: manipulation;
   content: "";
   position: absolute;
   background-color: rgba(0, 0, 0, 1);
@@ -622,6 +647,7 @@ body {
 }
 
 .righttv {
+  touch-action: manipulation;
   content: "";
   position: absolute;
   background-color: rgba(0, 0, 0, 1);
@@ -660,13 +686,16 @@ body {
 }
 
 .custom_body {
+  touch-action: manipulation;
   padding-top: 0;
 }
 
 ::-webkit-scrollbar {
+  touch-action: manipulation;
   display: none;
 }
 
 .custom_container {
+  touch-action: manipulation;
   padding-top: calc(var(--pixel-size) * 18px);
 }

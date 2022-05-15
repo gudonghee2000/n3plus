@@ -81,5 +81,5 @@ function saveAs(canvas) {
 
     setTimeout(function(){
         window.location.href = "http://34.64.194.130:8080/loading";
-    }, 1500);
+    }, 500);
 }

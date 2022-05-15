@@ -6,6 +6,7 @@
 }
 
 .question_body {
+   touch-action: manipulation;
    ::-webkit-scrollbar {
       display: none;
     }
@@ -13,6 +14,7 @@
 }
 
 .question_header {
+   touch-action: manipulation;
    margin-left: 22.5%;
     display: flex;
     align-items: center;
@@ -27,10 +29,12 @@
 }
 
 .question_main {
+   touch-action: manipulation;
    padding-top: calc(var(--pixel-size) * 18px);
 }
 
 .question_items_line {
+   touch-action: manipulation;
    margin-left: 22.5%;
    padding-bottom: 253px;
    width: 55.0%;
@@ -42,6 +46,7 @@
 }
 
 .question_Title {
+   touch-action: manipulation;
       width: auto;
      position: relative;
      display: block;
@@ -50,6 +55,7 @@
 }
 
 .question_title_img {
+   touch-action: manipulation;
    width: calc(var(--pixel-size) * 55px);
    display: block;
    margin: auto;
@@ -57,10 +63,12 @@
 }
 
 ul {
+   touch-action: manipulation;
    display: none;
 }
 
 .question_character {
+   touch-action: manipulation;
    width: calc(var(--pixel-size) * 32px);
    height: calc(var(--pixel-size) * 32px);
    overflow: hidden;
@@ -69,12 +77,14 @@ ul {
 }
 
 .question_character_spritesheet {
+   touch-action: manipulation;
    animation: moveSpritesheet 1s steps(4) infinite;
    width: calc(128px * var(--pixel-size));
    position: absolute;
 }
 
 .question_pixelart {
+   touch-action: manipulation;
    image-rendering: pixelated;
 }
 
@@ -101,6 +111,7 @@ ul {
 }
 
 .question_color-controls {
+   touch-action: manipulation;
    position: absolute;
    z-index: 99;
    left: 50%;
@@ -116,27 +127,32 @@ ul {
 
 
 #question_name {
+   touch-action: manipulation;
    @include pokeFont(2);
    display: none;
 }
 
 #question_traffic {
+   touch-action: manipulation;
    @include pokeFont(2);
    display: none;
 }
 
 #question_worry {
+   touch-action: manipulation;
    @include pokeFont(2);
    display: none;
 }
 
 #question_last {
+   touch-action: manipulation;
    @include pokeFont(2);
    display: none;
 }
 
 
 .answer1 {
+   touch-action: manipulation;
    @include pokeFont(2);
    display: inline-block;
    cursor: pointer;
@@ -145,6 +161,7 @@ ul {
 }
 
 .answer2 {
+   touch-action: manipulation;
    @include pokeFont(2);
    display: inline-block;
    cursor: pointer;
@@ -153,6 +170,7 @@ ul {
 }
 
 .answer3 {
+   touch-action: manipulation;
    @include pokeFont(2);
    display: inline-block;
    cursor: pointer;
@@ -161,6 +179,7 @@ ul {
 }
 
 .answer4 {
+   touch-action: manipulation;
    @include pokeFont(2);
    display: inline-block;
    cursor: pointer;
@@ -192,6 +211,7 @@ ul {
 }
 
 .textinput {
+   touch-action: manipulation;
    padding-left: 5px;
    outline: none;
    min-width: 50px;
@@ -206,6 +226,7 @@ ul {
 }
 
 .textinput:focus {
+   touch-action: manipulation;
    border-color: #3d3d3d;
 }
 
@@ -213,12 +234,14 @@ ul {
 
 
 #question_lastAnswer {
+   touch-action: manipulation;
    @include pokeFont(2);
    font-family: "Pokemon GB", monospace;
    display: none;
 }
 
 .question_typing {
+   touch-action: manipulation;
    @include pokeFont(2);
    line-height : 1.5em;
    margin-bottom: 0px;
@@ -236,6 +259,7 @@ ul {
 }
 
 .question_blank {
+   touch-action: manipulation;
    width: 0;
    height: 0;
    margin: 0;
@@ -243,5 +267,6 @@ ul {
 }
 
 .question_typing_div {
+   touch-action: manipulation;
    margin-bottom: 20px;
 }

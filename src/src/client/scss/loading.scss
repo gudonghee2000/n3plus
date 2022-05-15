@@ -1,4 +1,5 @@
  #loading_body {
+    touch-action: manipulation;
      ::-webkit-scrollbar {
          display: none;
      }
@@ -7,6 +8,7 @@
  }
 
  .loading_header {
+    touch-action: manipulation;
      margin-left: 22.5%;
      display: flex;
      align-items: center;
@@ -22,6 +24,7 @@
 
  //(수정) 클래스 추가
  .loading_layer {
+    touch-action: manipulation;
      background-color: rgba(255, 255, 255, 0.4);
      position: absolute;
      top: 0;
@@ -37,6 +40,7 @@
  }
 
  .loading_Title {
+    touch-action: manipulation;
      width: auto;
      position: relative;
      display: block;
@@ -46,6 +50,7 @@
  }
 
  .loading_title_img {
+    touch-action: manipulation;
      width: calc(var(--pixel-size) * 55px);
      display: block;
      margin: auto;
@@ -53,6 +58,7 @@
  }
 
  .loading_Character1 {
+    touch-action: manipulation;
      width: calc(32px * var(--pixel-size2));
      height: calc(32px * var(--pixel-size2));
      position: relative;
@@ -62,6 +68,7 @@
  }
 
  .loading_Character_spritesheet {
+    touch-action: manipulation;
      animation: moveSpritesheet 1s steps(4) infinite;
      width: calc(128px * var(--pixel-size2));
      position: absolute;
@@ -69,6 +76,7 @@
  }
 
  .loading_Character_shadow {
+    touch-action: manipulation;
      position: absolute;
      width: calc(32px * var(--pixel-size2));
      height: calc(32px * var(--pixel-size2));
@@ -76,6 +84,7 @@
 
 
  .loading_color-controls {
+    touch-action: manipulation;
      position: absolute;
      z-index: 99;
      left: 50%;
@@ -90,11 +99,13 @@
 
 
      ul {
+        touch-action: manipulation;
          display: none;
          list-style: none;
      }
 
      .loading_typing {
+        touch-action: manipulation;
          @include pokeFont(2);
          display: block;
          text-align: center;
@@ -118,6 +129,7 @@
      }
 
      #loading_start {
+        touch-action: manipulation;
          @include pokeFont(2);
          display: none;
          text-align: center;
@@ -126,6 +138,7 @@
      }
 
      #loading_restart {
+        touch-action: manipulation;
          @include pokeFont(2);
          display: block;
          text-align: center;
@@ -137,10 +150,12 @@
  }
 
  .loading_main {
+    touch-action: manipulation;
      padding-top: calc(var(--pixel-size2) * 18px);
  }
 
  .loading_items_line {
+    touch-action: manipulation;
      margin-left: 22.5%;
      padding-bottom: 156px;
      width: 55.0%;
