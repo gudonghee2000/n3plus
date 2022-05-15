@@ -4,3 +4,7 @@
 @import "./letter.scss";
 @import "./loading.scss";
 @import "./nftpage.scss";
+
+* {
+    touch-action: none;
+}
