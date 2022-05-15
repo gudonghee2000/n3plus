@@ -70,7 +70,7 @@ nameAnswer.addEventListener('keypress', function (key) {
         nameAnswer.remove();
         const character = document.querySelector(".question_pixelart");
         character.classList.add("question_face-right");
-        typingTxt = nameResult + "? 좋아. \n 난 너만의 걱정인형 " + characterName + "(이)야😎 \n 오늘 뭐 타고 왔어? \n";
+        typingTxt = nameResult + "? 좋아. \n 난 편하게 " + characterName + "(이)라고 불러줘😎 \n 오늘 뭐 타고 왔어? \n";
         typingIdx = 0;
         text.innerHTML = "";
         var tysecond = setInterval(secondTyping, 100);
@@ -133,7 +133,7 @@ function thirdTyping() {
         typingIdx++;
     } else {
         checkIdx++;
-        typingTxt = "아무래도 언제나 평온한 상태를 \n" + "유지한다는 건 어려운 일인거 같아...😥 \n" + "어떤게 가장 널 힘들게 만드는 것 같아?";
+        typingTxt = "아무래도 언제나 평온한 상태를 \n" + "유지한다는 건 어려운 일인 것 같아...😥 \n" + "어떤게 가장 널 힘들게 만드는 것 같아?";
         typingIdx = 0;
 
         setTimeout(function () {
@@ -288,7 +288,7 @@ function fiveTyping() {
         typingIdx++;
     } else {
         checkIdx++;
-        typingTxt = "그랬구나.. 난 요즘 사람들이 무심코 한 말로 \n" + "괜히 상처를 받기도 하는 것 같아. \n" + "혹시 너도 상처가 됐던 말이 있어?";
+        typingTxt = "그랬구나.. 난 최근 '나에 대한 고민을 많이 하는 것 같아. \n" + "몸이든, 마음이든 내가 건강하지 못하면 많은 의미가 사라지잖아. \n" + "넌 스스로를 잘 챙기고, 아껴주고 있어?";
         typingIdx = 0;
 
         setTimeout(function () {
@@ -395,14 +395,14 @@ function sendMiddleAnswerToServer() {
         success: function (data) {
             const emotionName = data.emotion;
             var messageForAdd;
-            if (emotionName === "경험") {
+            if (emotionName === "긍정") {
                 const character = document.querySelector(".question_pixelart");
-                var messageForAdd = "헙,, 좀 속상했겠다. 😢 \n";
-            } else if (emotionName === "미경험") {
+                var messageForAdd = "나름 건강하게 살아가려고 애쓰고 있었구나! 고생이 많았네.😊  \n";
+            } else if (emotionName === "부정") {
                 const character = document.querySelector(".question_pixelart");
                 character.classList.remove("question_face-left");
                 character.classList.add("question_face-right");
-                var messageForAdd = "ㅎㅎ 딱히 없다면 오히려 좋을지도 😜 \n";
+                var messageForAdd = "앞으로는 스스로의 목소리에, 조금 더 귀를 기울여야겠구먼!😜 \n";
             }
             text.innerHTML = "";
             typingIdx = 0;
@@ -439,7 +439,7 @@ function createNewAnswer() {
         first.setAttribute("class", "answer3");
         second.setAttribute("class", "answer3");
         first.textContent = "아니. 스스로 해결하는 편이 더 낫다고 생각해.";
-        second.textContent = "응. 이야기를 하다 보면 마음의 짐이 조금 덜어지는 것 같아.";
+        second.textContent = "응. 이야기 하다 보면 마음의 짐이 조금 덜어지는 것 같아.";
         const controls = document.querySelector(".question_color-controls");
         controls.appendChild(first);
         controls.appendChild(second);
@@ -463,7 +463,7 @@ function createNewAnswer() {
             document.querySelector(".question_typing").style.display = "inline-block";
             messageForClient += "가끔 마음이 어려운 순간이 오더라도,지금처럼 주변에 이야기도 나누면서 마음의 짐도 나눴으면 좋겠다! \n";
             typingIdx = 0;
-            typingTxt = "맞아. 가끔은 누군가에게 털어놓는 것만으로도 \n 많은 위로가 되기도 하지. \n 최근에 답답한 일이나 고민이 있었다면 \n 오늘 조금 털어두고 가 🙏";
+            typingTxt = "맞아. 가끔은 누군가에게 털어놓는 것만으로도 \n 많은 위로가 되기도 하지. \n 최근에 답답한 일이나 고민이 있었다면 \n 조금이라도 나한테 말해줄래? 🙏";
             tyfive = setInterval(eightTyping, 100);
         })
         newAnswerBool = true;
