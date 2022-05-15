@@ -288,7 +288,7 @@ function fiveTyping() {
         typingIdx++;
     } else {
         checkIdx++;
-        typingTxt = "그랬구나.. 난 최근 '나에 대한 고민을 많이 하는 것 같아. \n" + "몸이든, 마음이든 내가 건강하지 못하면 많은 의미가 사라지잖아. \n" + "넌 스스로를 잘 챙기고, 아껴주고 있어?";
+        typingTxt = "그랬구나.. 난 최근 '나'에 대한 고민을 많이 하는 것 같아. \n" + "몸이든, 마음이든 내가 건강하지 못하면 의미가 사라지잖아. \n" + "넌 스스로를 잘 챙기고, 아껴주고 있어?";
         typingIdx = 0;
 
         setTimeout(function () {
