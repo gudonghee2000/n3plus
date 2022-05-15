@@ -542,3 +542,9 @@ leftButton.addEventListener("click", function () {
 	setDirection('LEFT')
 })
 
+const body = document.querySelector(".custom_body");
+
+body.addEventListener("onContextMenu", function (e) {
+    e.preventDefault();
+} )
+
