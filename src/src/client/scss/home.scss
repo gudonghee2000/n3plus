@@ -35,7 +35,7 @@ $pixel: 0.25rem;
 
 
 #home {
-   touch-action: manipulation;
+   touch-action: none;
    display: flex;
    align-items: baseline;
    justify-content: center;
@@ -52,7 +52,7 @@ $pixel: 0.25rem;
 
 //(수정) 클래스 추가
 .layer {
-   touch-action: manipulation;
+   touch-action: none;
    background-color: rgba(255, 255, 255, 0.4);
    position: absolute;
    top: 0;
@@ -62,7 +62,7 @@ $pixel: 0.25rem;
 }
 
 .Title {
-   touch-action: manipulation;
+   touch-action: none;
    width: auto;
    position: relative;
    display: block;
@@ -71,7 +71,7 @@ $pixel: 0.25rem;
 }
 
 .home_title {
-   touch-action: manipulation;
+   touch-action: none;
    width: calc(var(--pixel-size) * 80px);
    display: block;
    margin: auto;
@@ -81,7 +81,7 @@ $pixel: 0.25rem;
 
 
 .Character1 {
-   touch-action: manipulation;
+   touch-action: none;
    width: calc(32px * var(--pixel-size1));
    height: calc(32px * var(--pixel-size1));
    position: relative;
@@ -91,7 +91,7 @@ $pixel: 0.25rem;
 }
 
 .Character_spritesheet {
-   touch-action: manipulation;
+   touch-action: none;
    animation: moveSpritesheet 1s steps(4) infinite;
    width: calc(128px * var(--pixel-size1));
    position: absolute;
@@ -99,14 +99,14 @@ $pixel: 0.25rem;
 }
 
 .Character_shadow {
-   touch-action: manipulation;
+   touch-action: none;
    position: absolute;
    width: calc(32px * var(--pixel-size1));
    height: calc(32px * var(--pixel-size1));
 }
 
 .pixelart {
-   touch-action: manipulation;
+   touch-action: none;
    image-rendering: pixelated;
 }
 
@@ -134,7 +134,7 @@ $pixel: 0.25rem;
 }
 
 .home_color-controls {
-   touch-action: manipulation;
+   touch-action: none;
    position: absolute;
    z-index: 99;
    left: 50%;
@@ -149,13 +149,13 @@ $pixel: 0.25rem;
 
 
    ul {
-      touch-action: manipulation;
+      touch-action: none;
       display: none;
       list-style: none;
    }
 
    .typing {
-      touch-action: manipulation;
+      touch-action: none;
       @include pokeFont(2);
       display: block;
       text-align: center;
@@ -179,7 +179,7 @@ $pixel: 0.25rem;
    }
 
    #start {
-      touch-action: manipulation;
+      touch-action: none;
       @include pokeFont(2);
       display: none;
       text-align: center;
@@ -188,7 +188,7 @@ $pixel: 0.25rem;
    }
 
    #realStart {
-      touch-action: manipulation;
+      touch-action: none;
       @include pokeFont(2);
       display: block;
       text-align: center;

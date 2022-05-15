@@ -1,10 +1,10 @@
 #letter_body {
-    touch-action: manipulation;
+    touch-action: none;
     padding-top: 0;
 }
 
 .letter_header {
-    touch-action: manipulation;
+    touch-action: none;
     margin-left: 22.5%;
     display: flex;
     align-items: center;
@@ -19,7 +19,7 @@
 }
 
 .letter_items_line {
-    touch-action: manipulation;
+    touch-action: none;
     margin-left: 22.5%;
     padding-bottom: 317px;
     width: 55.0%;
@@ -31,12 +31,12 @@
 }
 
 .letter_container {
-    touch-action: manipulation;
+    touch-action: none;
     padding-top: calc(var(--pixel-size) * 18px);
 }
 
 .letter_title {
-    touch-action: manipulation;
+    touch-action: none;
     width: auto;
    position: relative;
    display: block;
@@ -45,7 +45,7 @@
 }
 
 .letter_title_inbox {
-    touch-action: manipulation;
+    touch-action: none;
     width: calc(var(--pixel-size) * 55px);
    display: block;
    margin: auto;
@@ -53,7 +53,7 @@
 }
 
 .overlay {
-    touch-action: manipulation;
+    touch-action: none;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -66,13 +66,13 @@
 }
 
 .overlay:target {
-    touch-action: manipulation;
+    touch-action: none;
     visibility: visible;
     opacity: 1;
 }
 
 .popup {
-    touch-action: manipulation;
+    touch-action: none;
     margin: 70px auto;
     background: #fff;
     border-radius: 15px 15px 5px 5px;
@@ -88,14 +88,14 @@
 }
 
 .popup .content {
-    touch-action: manipulation;
+    touch-action: none;
     padding: 20px;
     max-height: 30%;
     overflow: auto;
 }
 
 .header {
-    touch-action: manipulation;
+    touch-action: none;
     padding-bottom: 50px;
     display: flex;
     align-items: center;
@@ -109,7 +109,7 @@
 }
 
 .menu-circle {
-    touch-action: manipulation;
+    touch-action: none;
     width: 15px;
     height: 15px;
     background-color: #f96057;
@@ -120,7 +120,7 @@
 }
 
 .letter_menu-circle {
-    touch-action: manipulation;
+    touch-action: none;
     margin-top: 48px;
     width: 15px;
     height: 15px;
@@ -132,7 +132,7 @@
 }
 
 .wave-effect {
-    touch-action: manipulation;
+    touch-action: none;
     position: relative;
     margin: 0 auto;
     top: 40%;
@@ -149,13 +149,13 @@
 }
 
 .wave-effect span {
-    touch-action: manipulation;
+    touch-action: none;
     position: relative;
     font-size: 74px;
 }
 
 .wave-effect::after {
-    touch-action: manipulation;
+    touch-action: none;
     opacity: 0;
     display: flex;
     flex-direction: row;
@@ -180,7 +180,7 @@
 }
 
 .wave-effect::before {
-    touch-action: manipulation;
+    touch-action: none;
     opacity: 0;
     display: flex;
     flex-direction: row;
@@ -217,7 +217,7 @@
 }
 
 .letter_character {
-    touch-action: manipulation;
+    touch-action: none;
     width: calc(var(--pixel-size) * 32px);
     height: calc(var(--pixel-size) * 32px);
     overflow: hidden;
@@ -227,11 +227,11 @@
 
 
 .letter_character_spritesheet {
-    touch-action: manipulation;
+    touch-action: none;
     -webkit-animation: walkAnimation 1.5s steps(4) infinite;
     animation: walkAnimation 1.5s steps(4) infinite;
     display: block;
-    touch-action: manipulation;
+    touch-action: none;
     width: calc(var(--pixel-size) * 128px);
     position: absolute;
     top: 0;
