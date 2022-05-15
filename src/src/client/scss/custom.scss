@@ -741,3 +741,7 @@ body {
   touch-action: none;
   padding-top: calc(var(--pixel-size) * 18px);
 }
+
+.custom_wrap {
+  touch-action: none;
+}
