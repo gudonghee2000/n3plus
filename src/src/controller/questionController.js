@@ -53,7 +53,7 @@ export const postQuestionSave = async (req, res) => {
     console.log(clientmessage);
     console.log(userName);
     console.log(name);
-    await customModel.findOneAndUpdate({ name, userId }, { $set: { username: userName, message: clientmessage, categoryName: category } });
+    await customModel.findOneAndUpdate({ name, id:userId }, { $set: { username: userName, message: clientmessage, categoryName: category } });
 }
 
 export const postMiddleQuestion = async (req, res) => {
