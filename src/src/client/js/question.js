@@ -439,7 +439,7 @@ function createNewAnswer() {
         first.setAttribute("class", "answer3");
         second.setAttribute("class", "answer3");
         first.textContent = "아니. 스스로 해결하는 편이 더 낫다고 생각해.";
-        second.textContent = "응. 이야기를 하다 보면 마음의 짐이 덜어지는 것 같기도 해.";
+        second.textContent = "응. 이야기를 하다 보면 마음의 짐이 조금 덜어지는 것 같아.";
         const controls = document.querySelector(".question_color-controls");
         controls.appendChild(first);
         controls.appendChild(second);
