@@ -476,7 +476,7 @@ body {
   align-items: center;
   flex-shrink: 0;
   height: 45px;
-  width: 54.4%;
+  width: 54.2%;
   background-color: rgba(54, 54, 54, 0.8);
   border-style: solid;
   border-width: 5px;
@@ -487,8 +487,8 @@ body {
 .custom_items_line {
   touch-action: none;
   margin-left: 22.5%;
-  padding-bottom: 107px;
-  width: 54.4%;
+  padding-bottom: 124px;
+  width: 54.2%;
   border-style: solid;
   border-width: 5px;
   border-top-width: 0px;
@@ -917,7 +917,7 @@ body {
   align-items: center;
   flex-shrink: 0;
   height: 45px;
-  width: 54.4%;
+  width: 54.2%;
   background-color: rgba(54, 54, 54, 0.8);
   border-style: solid;
   border-width: 5px;
@@ -933,8 +933,8 @@ body {
 .question_items_line {
   touch-action: none;
   margin-left: 22.5%;
-  padding-bottom: 253px;
-  width: 54.4%;
+  padding-bottom: 269px;
+  width: 54.2%;
   border-style: solid;
   border-width: 5px;
   border-top-width: 0px;
@@ -1236,7 +1236,7 @@ ul {
 .letter_items_line {
   touch-action: none;
   margin-left: 22.5%;
-  padding-bottom: 317px;
+  padding-bottom: 327px;
   width: 55%;
   border-style: solid;
   border-width: 5px;
@@ -1309,6 +1309,19 @@ ul {
   overflow: auto;
 }
 
+.letter_inner_header {
+  touch-action: none;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  height: 45px;
+  width: 100%;
+  background-color: rgba(54, 54, 54, 0.8);
+  border-bottom: 5px solid rgba(113, 119, 144, 0.25);
+  border-radius: 15px 15px 0px 0px;
+  border-color: black;
+}
+
 .header {
   touch-action: none;
   padding-bottom: 50px;
@@ -1336,7 +1349,7 @@ ul {
 
 .letter_menu-circle {
   touch-action: none;
-  margin-top: 48px;
+  margin-top: 5px;
   width: 15px;
   height: 15px;
   background-color: #f96057;
@@ -1387,7 +1400,7 @@ ul {
   border: 8px solid rgba(0, 0, 0, 0.2);
   border-radius: 100%;
   animation-name: ripple;
-  animation-duration: 0.3s;
+  animation-duration: 0.9s;
   animation-delay: 0s;
   animation-iteration-count: infinite;
   animation-timing-function: cubic-bezier(0.65, 0, 0.34, 1);
@@ -1412,7 +1425,7 @@ ul {
   border: 8px solid rgba(0, 0, 0, 0.2);
   border-radius: 100%;
   animation-name: ripple;
-  animation-duration: 0.3s;
+  animation-duration: 0.9s;
   animation-delay: 0s;
   animation-iteration-count: infinite;
   animation-timing-function: cubic-bezier(0.65, 0, 0.34, 1);
@@ -1481,7 +1494,7 @@ ul {
   align-items: center;
   flex-shrink: 0;
   height: 45px;
-  width: 55%;
+  width: 54.2%;
   background-color: rgba(54, 54, 54, 0.8);
   border-style: solid;
   border-width: 5px;
@@ -1628,8 +1641,8 @@ ul {
 .loading_items_line {
   touch-action: none;
   margin-left: 22.5%;
-  padding-bottom: 156px;
-  width: 55%;
+  padding-bottom: 172px;
+  width: 54.2%;
   border-style: solid;
   border-width: 5px;
   border-top-width: 0px;
