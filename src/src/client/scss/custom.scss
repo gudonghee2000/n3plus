@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 :root {
+  touch-action: none;
   --pixel-size: 6;
 }
 
@@ -166,109 +167,129 @@ EX: https://s3-us-west-2.amazonaws.com/s.cdpn.io/21542/WalkingDemo-HANK-2-SHEET.
 */
 /* 베이스*/
 .Character--walk-down .Character_sprite-sheet_base {
+  touch-action: none;
   top: 0;
 }
 
 .Character--walk-down .Character_sprite-sheet_accessory {
+  touch-action: none;
   top: 0;
 }
 
 .Character--walk-down .Character_sprite-sheet_hair {
+  touch-action: none;
   top: 0;
 }
 
 .Character--walk-down .Character_sprite-sheet_cloth {
+  touch-action: none;
   top: 0;
 }
 
 .Character--walk-down .Character_sprite-sheet_bottom {
+  touch-action: none;
   top: 0;
 }
 
 .Character--walk-down .Character_sprite-sheet_shoes {
+  touch-action: none;
   top: 0;
 }
 
 /* 춤 */
 .Character--walk-right .Character_sprite-sheet_base {
+  touch-action: none;
   top: calc(var(--pixel-size) * -32px);
 }
 
 .Character--walk-right .Character_sprite-sheet_accessory {
+  touch-action: none;
   top: calc(var(--pixel-size) * -32px);
 }
 
 .Character--walk-right .Character_sprite-sheet_hair {
+  touch-action: none;
   top: calc(var(--pixel-size) * -32px);
 }
 
 .Character--walk-right .Character_sprite-sheet_cloth {
+  touch-action: none;
   top: calc(var(--pixel-size) * -32px);
 }
 
 .Character--walk-right .Character_sprite-sheet_bottom {
+  touch-action: none;
   top: calc(var(--pixel-size) * -32px);
 }
 
 .Character--walk-right .Character_sprite-sheet_shoes {
+  touch-action: none;
   top: calc(var(--pixel-size) * -32px);
 }
 
 /* 걷기 */
 .Character--walk-up .Character_sprite-sheet_base {
+  touch-action: none;
   top: calc(var(--pixel-size) * -64px);
 }
 
 .Character--walk-up .Character_sprite-sheet_accessory {
+  touch-action: none;
   top: calc(var(--pixel-size) * -64px);
 }
 
 .Character--walk-up .Character_sprite-sheet_hair {
+  touch-action: none;
   top: calc(var(--pixel-size) * -64px);
 }
 
 .Character--walk-up .Character_sprite-sheet_cloth {
+  touch-action: none;
   top: calc(var(--pixel-size) * -64px);
 }
 
 .Character--walk-up .Character_sprite-sheet_bottom {
+  touch-action: none;
   top: calc(var(--pixel-size) * -64px);
 }
 
 .Character--walk-up .Character_sprite-sheet_shoes {
+  touch-action: none;
   top: calc(var(--pixel-size) * -64px);
 }
 
 /* 미정 */
 .Character--walk-left .Character_sprite-sheet_base {
+  touch-action: none;
   top: calc(var(--pixel-size) * -96px);
 }
 
 .Character--walk-left .Character_sprite-sheet_accessory {
+  touch-action: none;
   top: calc(var(--pixel-size) * -96px);
 }
 
 .Character--walk-left .Character_sprite-sheet_hair {
+  touch-action: none;
   top: calc(var(--pixel-size) * -96px);
 }
 
 .Character--walk-left .Character_sprite-sheet_cloth {
+  touch-action: none;
   top: calc(var(--pixel-size) * -96px);
 }
 
 .Character--walk-left .Character_sprite-sheet_bottom {
+  touch-action: none;
   top: calc(var(--pixel-size) * -96px);
 }
 
 .Character--walk-left .Character_sprite-sheet_shoes {
+  touch-action: none;
   top: calc(var(--pixel-size) * -96px);
 }
 
 /* Demo UI Stuff ------------------------------------------------- */
-* {
-  touch-action: none;
-  box-sizing: border-box;
-}
 
 body {
   touch-action: none;
@@ -360,55 +381,65 @@ body {
 
 /* 악세사리 버튼 */
 .NextSpritesheetButton--prev--accessory {
+  touch-action: none;
   top: -10%;
   left: 80%;
 }
 
 .NextSpritesheetButton--next--accessory {
+  touch-action: none;
   top: -10%;
   right: 0;
 }
 
 /* 머리 버튼 */
 .NextSpritesheetButton--prev--hair {
+  touch-action: none;
   top: 10%;
   left: 0;
 }
 
 .NextSpritesheetButton--next--hair {
+  touch-action: none;
   top: 10%;
   right: 0;
 }
 
 /* 옷 버튼 */
 .NextSpritesheetButton--prev--cloth {
+  touch-action: none;
   top: 30%;
   left: 0;
 }
 
 .NextSpritesheetButton--next--cloth {
+  touch-action: none;
   top: 30%;
   right: 0;
 }
 
 /* 바지 버튼 */
 .NextSpritesheetButton--prev--bottom {
+  touch-action: none;
   top: 50%;
   left: 0;
 }
 
 .NextSpritesheetButton--next--bottom {
+  touch-action: none;
   top: 50%;
   right: 0;
 }
 
 /* 신발 버튼 */
 .NextSpritesheetButton--prev--shoes {
+  touch-action: none;
   top: 70%;
   left: 0;
 }
 
 .NextSpritesheetButton--next--shoes {
+  touch-action: none;
   top: 70%;
   right: 0;
 }
@@ -445,30 +476,37 @@ body {
 }
 
 .DirectionArrow--active .Arrow_outline-top {
+  touch-action: none;
   stroke: #5268ec;
 }
 
 .DirectionArrow--active .Arrow_surface {
+  touch-action: none;
   stroke: #639bff;
 }
 
 .DirectionArrow--active .Arrow_outline-bottom {
+  touch-action: none;
   stroke: #164496;
 }
 
 .DirectionArrow--active .Arrow_edge {
+  touch-action: none;
   stroke: #7baaff;
 }
 
 .DirectionArrow--active .Arrow_front {
+  touch-action: none;
   stroke: #4c8bfd;
 }
 
 .DirectionArrow--active .Arrow_arrow-inset {
+  touch-action: none;
   stroke: #fff;
 }
 
 .DirectionArrow--active .Arrow_arrow-body {
+  touch-action: none;
   stroke: #fff;
 }
 
@@ -505,16 +543,19 @@ body {
 }
 
 .acc {
+  touch-action: none;
   top: -13%;
   left: 84%;
   width: 60px;
 }
 
 .cap {
+  touch-action: none;
   display: none;
 }
 
 .capImg_hair {
+  touch-action: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -522,6 +563,7 @@ body {
 }
 
 .result {
+  touch-action: none;
   margin-top: 500px;
   width: 2000px;
   height: 2000px;
