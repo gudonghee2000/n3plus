@@ -42,7 +42,10 @@ dlBtn.addEventListener("click", function () {
     img6.classList.add("capImg_hair");
     cap.appendChild(img6);
     cap.classList.add("result");
-    html2canvas(cap).then(canvas => {
+    html2canvas(cap, {
+        allowTaint:true,
+        useCORS:true,
+    }).then(canvas => {
         saveAs(canvas);
     })
 })
