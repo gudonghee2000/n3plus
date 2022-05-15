@@ -11,6 +11,7 @@ module.exports = {
     custom: BASE_JS + "custom.js",
     loading: BASE_JS + "loading.js",
     nftPage: BASE_JS + "nftPage.js",
+    letter:BASE_JS + "letter.js",
   },
   mode: "development",
   watch: true,

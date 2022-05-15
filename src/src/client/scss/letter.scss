@@ -18,6 +18,29 @@
     border-color: black;
 }
 
+.letter_color-controls {
+    touch-action: none;
+    position: absolute;
+    left: 50%;
+    bottom: $pixel * 20;
+    max-width: 35.5rem;
+    width: 100%;
+    margin-top: $pixel * 5;
+    margin-bottom: $pixel * 3;
+    transform: translateX(-50%);
+ 
+    @include dialogStyles;
+    
+    #letter_end {
+        touch-action: none;
+        @include pokeFont(2);
+        display: block;
+        text-align: center;
+        cursor: pointer;
+        -webkit-animation: fadein 2s;
+    }
+} 
+
 .letter_items_line {
     touch-action: none;
     margin-left: 22.5%;
@@ -279,20 +302,3 @@ h2 {
         transform: translate3d(-100%, 0%, 0);
     }
 }
-.letter_color-controls {
-    touch-action: none;
-    position: absolute;
-    z-index: 99;
-    left: 50%;
-    bottom: $pixel * 20;
-    max-width: $pixel * 150;
-    width: 100%;
-    margin-top: $pixel * 5;
-    margin-bottom: $pixel * 3;
-    transform: translateX(-50%);
- 
-    @include dialogStyles;
-    .letter_end {
-        margin: 0 auto;
-    }
-} 

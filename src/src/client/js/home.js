@@ -1,3 +1,8 @@
+var audio = new Audio('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/Lecrae_-_Anomaly_(Lyric_Video).mp3');
+audio.volume = 0.5;
+audio.autoplay = true;
+audio.play();
+
 var typingBool = false;
 var buttonBool = false;
 var typingIdx = 0;
@@ -48,3 +53,4 @@ var startDiv = document.querySelector('#start');
 startDiv.addEventListener("click", function () {
 	window.location.href = 'http://34.64.194.130:8080/custom';
 })
+
