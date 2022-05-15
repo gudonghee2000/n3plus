@@ -1,7 +1,7 @@
 @font-face {
    font-family: 'Pokemon GB';
-   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/DOSGothic.woff') format('woff');
-   font-weight: 700;
+   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+   font-weight: bold;
    font-style: normal;
 }
 
@@ -24,11 +24,12 @@ $pixel: 0.25rem;
 
 @mixin pokeFont($size: 1) {
    font-family: 'Pokemon GB', monospace;
-   font-weight: 400;
+   font-weight: 550;
    font-size: 10px * $size;
    text-transform: uppercase;
    font-smooth: never;
    -webkit-font-smoothing: none;
+   color: $black;
 }
 
 

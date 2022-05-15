@@ -44,6 +44,12 @@
    margin-top: -20px;
 }
 
+h2 {
+    @include pokeFont(2);
+    font-weight: bold;
+    font-size: 30px;
+}
+
 .letter_title_inbox {
     touch-action: none;
     width: calc(var(--pixel-size) * 55px);
@@ -88,6 +94,7 @@
 }
 
 .popup .content {
+    @include pokeFont(2);
     touch-action: none;
     padding: 20px;
     max-height: 30%;
@@ -272,3 +279,20 @@
         transform: translate3d(-100%, 0%, 0);
     }
 }
+.letter_color-controls {
+    touch-action: none;
+    position: absolute;
+    z-index: 99;
+    left: 50%;
+    bottom: $pixel * 20;
+    max-width: $pixel * 150;
+    width: 100%;
+    margin-top: $pixel * 5;
+    margin-bottom: $pixel * 3;
+    transform: translateX(-50%);
+ 
+    @include dialogStyles;
+    .letter_end {
+        margin: 0 auto;
+    }
+} 

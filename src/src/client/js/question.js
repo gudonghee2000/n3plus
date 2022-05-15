@@ -397,12 +397,12 @@ function sendMiddleAnswerToServer() {
             var messageForAdd;
             if (emotionName === "긍정") {
                 const character = document.querySelector(".question_pixelart");
-                var messageForAdd = "나름 건강하게 살아가려고 애쓰고 있었구나! 고생이 많았네.😊  \n";
+                var messageForAdd = "나름 건강하게 살아가려고 애쓰고 있었구나! \n고생이 많았네.😊 \n";
             } else if (emotionName === "부정") {
                 const character = document.querySelector(".question_pixelart");
                 character.classList.remove("question_face-left");
                 character.classList.add("question_face-right");
-                var messageForAdd = "앞으로는 스스로의 목소리에, 조금 더 귀를 기울여야겠구먼!😜 \n";
+                var messageForAdd = "앞으로는 스스로의 목소리에, \n 조금 더 귀를 기울여야겠구먼!😜 \n";
             }
             text.innerHTML = "";
             typingIdx = 0;
