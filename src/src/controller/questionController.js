@@ -4,8 +4,8 @@ export const getQuestion = async (req, res) => {
     const datas = await customModel.find({}).sort({ "id": -1 });
     const name = await datas[0].name;
     const url = await "/" + datas[0].url;
-    const userId = await datas[0].id;
-    return res.render("question", { name, url, userId });
+    const onlyid = await datas[0].id;
+    return res.render("question", { name, url, onlyid });
 }
 
 export const postQuestion = async (req, res) => {
@@ -49,11 +49,12 @@ function makeMessage(pororoResult) {
 }
 
 export const postQuestionSave = async (req, res) => {
-    const { userId, clientmessage, userName, name, category } = req.body;
+    const { id, clientmessage, userName, name, category } = req.body;
     console.log(clientmessage);
     console.log(userName);
     console.log(name);
-    await customModel.findOneAndUpdate({ id:userId }, { $set: { username: userName, message: clientmessage, categoryName: category } });
+    console.log(id);
+    await customModel.findOneAndUpdate({ id }, { $set: { username: userName, message: clientmessage, categoryName: category } });
 }
 
 export const postMiddleQuestion = async (req, res) => {

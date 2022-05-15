@@ -568,14 +568,14 @@ function nineTyping() {
     }
 }
 
-const userId = document.querySelector("#userid").innerText;
 function saveClientData() {
+    const onlyid = document.querySelector("#onlyid").innerText;
     messageForClient += categoryName + "에 관한 걱정은 내가 갖고 사라질게! 마법처럼 모든 일이 사라지거나 해결되지 않더라도, 분명 네 안에 또 한번 맞설 수 있는 힘이 생겼을거야. 널 믿는다 친구!"
     $.ajax({
         type: "POST",
         url: "/question/save",
         data: {
-            "userId" : userId,
+            "id" : onlyid,
             "clientmessage": messageForClient,
             "userName": nameResult,
             "name": characterName,
