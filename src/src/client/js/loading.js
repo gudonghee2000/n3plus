@@ -44,7 +44,7 @@ function createButton() {
 
 var startDiv = document.querySelector('#loading_start');
 startDiv.addEventListener("click", function () {
-	window.location.href = 'http://localhost:8080/question';
+	window.location.href = 'http://34.64.194.130:8080/question';
 })
 
 

@@ -79,7 +79,7 @@ function saveAs(canvas) {
         contentType: false,
     });
 
-    window.location.href = "http://localhost:8080/loading";
+    window.location.href = "http://34.64.194.130:8080/loading";
 }
 
 const nameInput = document.querySelector(".characterName");
