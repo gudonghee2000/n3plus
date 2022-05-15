@@ -79,12 +79,7 @@ function saveAs(canvas) {
         contentType: false,
     });
 
-    /* window.location.href = "http://34.64.194.130:8080/loading"; */
+    setTimeout(function(){
+        window.location.href = "http://34.64.194.130:8080/loading";
+    }, 1500);
 }
-
-const nameInput = document.querySelector(".characterName");
-
-nameInput.addEventListener("keyup", function() {
-    const name = document.querySelector('.characterName').value;
-    document.querySelector(".custom_name_box").innerText = name;
-})
