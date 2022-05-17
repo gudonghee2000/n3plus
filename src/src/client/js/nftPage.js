@@ -18,7 +18,7 @@ function add_div() {
         idDiv.innerText = datas[i].id;
 
         var link = document.querySelector(".nft-link");
-        link.href = "http://localhost:8080/nftpage/webcame/" + idDiv.innerText;
+        link.href = "http://34.64.194.130:8080//nftpage/webcame/" + idDiv.innerText;
         
         var imgTag = document.getElementById('photo2');
         imgTag.setAttribute("src", datas[i].url);
