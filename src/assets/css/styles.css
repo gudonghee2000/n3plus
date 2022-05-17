@@ -15,7 +15,6 @@
   line-height: 1.875em;
   background-image: url('background.gif');
   background-size: 100%;
-
 }
 
 .layer {
@@ -1291,7 +1290,7 @@ ul {
   border-radius: 0px 0px 15px 15px;
   border-color: black;
   background-image: url("letter.png");
-    background-size: 834px 689px;
+  background-size: 834px 689px;
 }
 
 .letter_container {
