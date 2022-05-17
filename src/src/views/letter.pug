@@ -3,7 +3,8 @@ html(lang="en")
 head 
     title worryburry letter
     link(rel="stylesheet" href="/static/css/styles.css")
-body(id="letter_body") 
+body(id="letter_body")
+    iframe(src="./letter.mp3" allow="autoplay" id="audio" style="display:none")
     <div style="touch-action: none">
         div(class="letter_header")
             div(class="menu-circle" style=" cursor: pointer;" onclick="location.href='#';")

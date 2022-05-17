@@ -13,8 +13,9 @@
   font-family: "Pokemon GB", monospace;
   font-size: 16px;
   line-height: 1.875em;
-  background-image: url("https://www.themasterpicks.com/wp-content/uploads/2020/04/22b22287602523.5dbd29081561d.gif");
-  background-size: 80%;
+  background-image: url('background.gif');
+  background-size: 100%;
+
 }
 
 .layer {
@@ -714,6 +715,7 @@ body {
 
 .cap {
   touch-action: none;
+  opacity: 0;
   display: none;
 }
 
@@ -1288,6 +1290,8 @@ ul {
   border-top-width: 0px;
   border-radius: 0px 0px 15px 15px;
   border-color: black;
+  background-image: url("letter.png");
+    background-size: 834px 689px;
 }
 
 .letter_container {
@@ -2252,7 +2256,6 @@ h2 {
   display: block;
   font-size: 14px;
   font-weight: normal;
-  opacity: 75%;
 }
 
 .nft-card .nft-card--content .nft-qrcode,
@@ -2376,10 +2379,6 @@ h2 {
   color: #fff;
 }
 
-.nft-card.nft-card--compact .nft-card--header .nft-user span {
-  opacity: 75%;
-}
-
 .nft-card.nft-card--compact .nft-card--footer {
   position: absolute;
   bottom: 40px;
@@ -2393,11 +2392,6 @@ h2 {
 .nft-card.nft-card--compact .nft-card--footer .nft-price {
   float: none;
   text-align: right;
-}
-
-.nft-card.nft-card--compact .nft-card--footer .nft-time span,
-.nft-card.nft-card--compact .nft-card--footer .nft-price span {
-  opacity: 75%;
 }
 
 .nft-profile {
@@ -2471,7 +2465,6 @@ h2 {
   display: block;
   font-size: 16px;
   text-transform: none;
-  opacity: 50%;
   margin-top: 5px;
 }
 
@@ -2524,7 +2517,7 @@ h2 {
 
 .nft-price,
 .nft-balance {
-  font-family: Roboto;
+  font-family: "Pokemon GB", monospace;
   font-size: 20px;
   font-weight: bold;
   line-height: 1.2;
@@ -2652,6 +2645,127 @@ p {
   border-top-width: 0px;
   border-radius: 0px 0px 15px 15px;
   border-color: black;
+}
+
+#nft-name {
+  font-family: "Pokemon GB", monospace;
+  font-weight: 550;
+  font-size: 20px;
+  color: black;
+  font-size: 25px;
+  color: rgb(0, 0, 0);
+  font-weight: 900;
+}
+
+#nft_category {
+  font-family: "Pokemon GB", monospace;
+  font-weight: 550;
+  font-size: 20px;
+  color: black;
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+  font-weight: 900;
+}
+
+#nft-price-span {
+  font-family: "Pokemon GB", monospace;
+  font-weight: 550;
+  font-size: 20px;
+  color: black;
+  font-size: 17px;
+  color: rgb(0, 0, 0);
+  font-weight: 900;
+}
+
+.nft-link {
+  width: 440px;
+  height: 644px;
+}
+
+:root {
+  --pixel-size: 8;
+}
+
+@font-face {
+  font-family: "DungGeunMo";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@-webkit-keyframes walkAnimation {
+  from {
+    transform: translate3d(0%, 0%, 0);
+  }
+  to {
+    transform: translate3d(-100%, 0%, 0);
+  }
+}
+@keyframes walkAnimation {
+  from {
+    transform: translate3d(0%, 0%, 0);
+  }
+  to {
+    transform: translate3d(-100%, 0%, 0);
+  }
+}
+.webcam_character {
+  width: calc(var(--pixel-size) * 32px);
+  height: calc(var(--pixel-size) * 32px);
+  overflow: hidden;
+  margin: calc(var(--pixel-size) * 6px) auto;
+  position: absolute;
+  left: 80%;
+  top: 45%;
+}
+
+.webcam__spritesheet {
+  -webkit-animation: walkAnimation 1.5s steps(4) infinite;
+  animation: walkAnimation 1.5s steps(4) infinite;
+  width: calc(var(--pixel-size) * 128px);
+}
+
+#webcame_container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-color: thistle;
+  border-width: 10px;
+}
+
+#videoElement {
+  background-color: white;
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  /* Safari and Chrome */
+  -moz-transform: rotateY(180deg);
+  /* Firefox */
+  border: 15px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 3px;
+}
+
+.webcame_home {
+  font-family: DungGeunMo;
+  position: absolute;
+  top: 5%;
+  left: 90%;
+  font-size: 60px;
+  font-weight: 600;
+  color: red;
+  background-color: white;
+  border-radius: 40px;
+  padding: 10px 20px 13px 20px;
+}
+
+.webcame_home:hover {
+  background-color: rgb(244, 96, 116);
+  color: white;
+  cursor: pointer;
+}
+
+#web_body {
+  padding-top: 0px;
 }
 
 * {

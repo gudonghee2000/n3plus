@@ -1,5 +1,3 @@
-
-
 var typingBool = false;
 var buttonBool = false;
 var typingIdx = 0;

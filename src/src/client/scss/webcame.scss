@@ -1,0 +1,87 @@
+:root{
+  --pixel-size: 8;
+}
+
+@font-face {
+  font-family: 'DungGeunMo';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@-webkit-keyframes walkAnimation {
+  from {
+    transform: translate3d(0%, 0%, 0);
+  }
+  to {
+    transform: translate3d(-100%, 0%, 0);
+  }
+}
+@keyframes walkAnimation {
+  from {
+    transform: translate3d(0%, 0%, 0);
+  }
+  to {
+    transform: translate3d(-100%, 0%, 0);
+  }
+}
+
+
+.webcam_character {
+  width: calc(var(--pixel-size) * 32px);
+  height: calc(var(--pixel-size) * 32px);
+  overflow: hidden;
+  margin: calc(var(--pixel-size) * 6px) auto;
+  position: absolute;
+  left: 80%;
+  top: 45%;
+}
+
+.webcam__spritesheet {
+  -webkit-animation: walkAnimation 1.5s steps(4) infinite;
+  animation: walkAnimation 1.5s steps(4) infinite;
+  width: calc(var(--pixel-size) * 128px);
+}
+
+#webcame_container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-color: thistle;
+  border-width: 10px;
+}
+
+#videoElement {
+  background-color: white;
+  transform: rotateY(180deg);
+  -webkit-transform:rotateY(180deg); /* Safari and Chrome */
+  -moz-transform:rotateY(180deg); /* Firefox */
+
+  border: 15px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 3px;
+}
+
+.webcame_home{
+  font-family: DungGeunMo;
+  position:absolute;
+  top: 5%;
+  left: 90%;
+  font-size: 60px;
+  font-weight: 600;
+  color: red;
+  background-color: white;
+  border-radius: 40px;
+  padding: 10px 20px 13px 20px;
+}
+
+.webcame_home:hover{
+  background-color: rgb(244, 96, 116);
+  color: white;
+  cursor: pointer;
+}
+
+#web_body {
+  padding-top: 0px;
+}

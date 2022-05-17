@@ -473,7 +473,7 @@
   display: block;
   font-size: 14px;
   font-weight: normal;
-  opacity: 75%;
+
 }
 .nft-card .nft-card--content .nft-qrcode ,
 .nft-card .nft-card--content .nft-qrcode .fa-qrcode {
@@ -575,7 +575,6 @@
   color: #fff;
 }
 .nft-card.nft-card--compact .nft-card--header .nft-user span {
-  opacity: 75%;
 }
 .nft-card.nft-card--compact .nft-card--footer {
   position: absolute;
@@ -592,7 +591,6 @@
 }
 .nft-card.nft-card--compact .nft-card--footer .nft-time span,
 .nft-card.nft-card--compact .nft-card--footer .nft-price span {
-  opacity: 75%;
 }
 
 
@@ -658,7 +656,6 @@
   display: block;
   font-size: 16px;
   text-transform: none;
-  opacity: 50%;
   margin-top: 5px;
 }
 .nft-profile .nft-profile--content .nft-action {
@@ -707,7 +704,7 @@
 
 .nft-price,
 .nft-balance {
-  font-family: Roboto;
+  font-family: 'Pokemon GB', monospace;
   font-size: 20px;
   font-weight: bold;
   line-height: 1.2;
@@ -834,4 +831,30 @@ p {
    border-top-width: 0px;
    border-radius: 0px 0px 15px 15px;
    border-color: black;
+}
+
+#nft-name {
+  @include pokeFont2(2);
+  font-size: 25px;
+  color: rgba(0, 0, 0);
+  font-weight: 900;
+}
+
+#nft_category {
+  @include pokeFont2(2);
+  font-size: 15px;
+  color: rgba(0, 0, 0);
+  font-weight: 900;
+}
+
+#nft-price-span {
+  @include pokeFont2(2);
+  font-size: 17px;
+  color: rgba(0, 0, 0);
+  font-weight: 900;
+}
+
+.nft-link {
+  width: 440px;
+  height: 644px;
 }

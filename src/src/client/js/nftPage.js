@@ -13,6 +13,13 @@ function add_div() {
       datas = data.items;
       console.log(datas);
       for (var i = 0; i < datas.length; i++) {
+        var idDiv = document.createElement('div');
+        idDiv.style.display = "none";
+        idDiv.innerText = datas[i].id;
+
+        var link = document.querySelector(".nft-link");
+        link.href = "http://localhost:8080/nftpage/webcame/" + idDiv.innerText;
+        
         var imgTag = document.getElementById('photo2');
         imgTag.setAttribute("src", datas[i].url);
     
@@ -26,13 +33,15 @@ function add_div() {
        
         var div = document.createElement('div');
         div.innerHTML = document.getElementById('room_type').innerHTML;
+
+        var price = document.querySelector(".fa-brands");
+        price.innerHTML = " " + (Math.random() * 0.01).toFixed(4) + "worry";
     
         document.getElementById('field').appendChild(div);
       }
     }
   });
 }
-
 
 // Audio
 var audio = new Audio('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/Lecrae_-_Anomaly_(Lyric_Video).mp3');

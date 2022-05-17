@@ -54,6 +54,7 @@ export const postQuestionSave = async (req, res) => {
     console.log(userName);
     console.log(name);
     console.log(id);
+    console.log(category);
     await customModel.findOneAndUpdate({ id }, { $set: { username: userName, message: clientmessage, categoryName: category } });
 }
 

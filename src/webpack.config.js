@@ -12,6 +12,7 @@ module.exports = {
     loading: BASE_JS + "loading.js",
     nftPage: BASE_JS + "nftPage.js",
     letter:BASE_JS + "letter.js",
+    webcame:BASE_JS + "webcame.js",
   },
   mode: "development",
   watch: true,
