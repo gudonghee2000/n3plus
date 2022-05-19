@@ -788,7 +788,7 @@ p {
 
 .page_character_spritesheet {
   animation: moveSpritesheet 1s steps(4) infinite;
-   width: calc(256px * var(--pixel-size));
+   width: calc(201px * var(--pixel-size));
    position: absolute;
 }
 

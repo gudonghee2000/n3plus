@@ -15,7 +15,7 @@
   \*********************************/
 /***/ (() => {
 
-eval("var endButton = document.querySelector(\"#letter_end\");\n$('html, body').css({\n  'overflow': 'hidden',\n  'height': '100%'\n});\n$('#element').on('scroll mousewheel', function (event) {\n  event.preventDefault();\n  event.stopPropagation();\n  return false;\n});\nendButton.addEventListener(\"click\", function () {\n  window.location.href = \"http://34.64.194.130:8080\";\n});\n\n//# sourceURL=webpack://project/./src/client/js/letter.js?");
+eval("var endButton = document.querySelector(\"#letter_end\");\nendButton.addEventListener(\"click\", function () {\n  window.location.href = \"http://34.64.194.130:8080\";\n});\n\n//# sourceURL=webpack://project/./src/client/js/letter.js?");
 
 /***/ })
 

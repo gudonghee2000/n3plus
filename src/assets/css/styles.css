@@ -5,7 +5,6 @@
   font-weight: bold;
   font-style: normal;
 }
-
 #home {
   touch-action: none;
   display: flex;
@@ -14,8 +13,8 @@
   font-family: "Pokemon GB", monospace;
   font-size: 16px;
   line-height: 1.875em;
-  background-image: url('background.gif');
-  background-size: 100%;
+  background-size: 80%;
+  
 }
 
 .layer {
@@ -1287,7 +1286,7 @@ ul {
 .letter_items_line {
   touch-action: none;
   margin-left: 22.5%;
-  padding-bottom: 527px;
+  padding-bottom: 563px;
   width: 54.5%;
   border-style: solid;
   border-width: 5px;
@@ -1351,7 +1350,7 @@ h2 {
 
 .popup {
   touch-action: none;
-  margin: 70px auto;
+  margin: 138px auto;
   background: #fff;
   border-radius: 15px 15px 5px 5px;
   width: 570px;
@@ -2605,7 +2604,7 @@ p {
 
 .page_character_spritesheet {
   animation: moveSpritesheet 1s steps(4) infinite;
-  width: calc(256px * var(--pixel-size));
+  width: calc(201px * var(--pixel-size));
   position: absolute;
 }
 
