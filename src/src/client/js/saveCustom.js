@@ -18,30 +18,30 @@ dlBtn.addEventListener("click", function () {
     img.src = charecter.src;
     img.classList.add("capImg_hair");
     cap.appendChild(img);
-   
-    const hair = document.querySelector(".active_hair");
-    const img2 = document.createElement("img");
-    img2.src = hair.src;
-    img2.classList.add("capImg_hair");
-    cap.appendChild(img2);
-
-    const cloth = document.querySelector(".active_cloth")
-    const img3 = document.createElement("img");
-    img3.src = cloth.src;
-    img3.classList.add("capImg_hair");
-    cap.appendChild(img3);
-
-    const bottom = document.querySelector(".active_bottom")
-    const img4 = document.createElement("img");
-    img4.src = bottom.src;
-    img4.classList.add("capImg_hair");
-    cap.appendChild(img4);
 
     const shoes = document.querySelector(".active_shoes")
     const img5 = document.createElement("img");
     img5.src = shoes.src;
     img5.classList.add("capImg_hair");
     cap.appendChild(img5);
+
+    const bottom = document.querySelector(".active_bottom")
+    const img4 = document.createElement("img");
+    img4.src = bottom.src;
+    img4.classList.add("capImg_hair");
+    cap.appendChild(img4);
+   
+    const cloth = document.querySelector(".active_cloth")
+    const img3 = document.createElement("img");
+    img3.src = cloth.src;
+    img3.classList.add("capImg_hair");
+    cap.appendChild(img3);
+
+    const hair = document.querySelector(".active_hair");
+    const img2 = document.createElement("img");
+    img2.src = hair.src;
+    img2.classList.add("capImg_hair");
+    cap.appendChild(img2);
 
     const accessory = document.querySelector(".active_accessory")
     const img6 = document.createElement("img");

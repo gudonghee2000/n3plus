@@ -20,7 +20,11 @@ var spritesheets_accessory = [
 	"/acc/accessory_2.png",
 	"/acc/accessory_3.png",
 	"/acc/accessory_4.png",
-	"/acc/accessory_5.png"
+	"/acc/accessory_5.png",
+	"/acc/accessory_6.png",
+	"/acc/accessory_7.png",
+	"/acc/accessory_8.png",
+	"/acc/accessory_9.png",
 ];
 
 var spritesheets_hair = [
@@ -49,6 +53,11 @@ var spritesheets_hair = [
 	"/hair/hair5_3.png",
 	"/hair/hair5_4.png",
 	"/hair/hair5_5.png",
+	"/hair/hair6_1.png",
+	"/hair/hair6_2.png",
+	"/hair/hair6_3.png",
+	"/hair/hair6_4.png",
+	"/hair/hair6_5.png",
 ];
 
 var spritesheets_cloth = [
