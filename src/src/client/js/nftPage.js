@@ -11,8 +11,8 @@ function add_div() {
     async: true,
     success: function (data) {
       datas = data.items;
+      console.log(datas);
       for (var i = 0; i < datas.length; i++) {
-
         var imgTag = document.getElementById('photo2');
         imgTag.setAttribute("src", datas[i].url);
     
@@ -27,8 +27,8 @@ function add_div() {
         var div = document.createElement('div');
         div.innerHTML = document.getElementById('room_type').innerHTML;
 
-        var price = document.querySelector(".fa-brands");
-        price.innerHTML = " " + datas[i].price + "worry";
+        const price = document.querySelector(".fa-brands");
+        price.innerText = " " + datas[i].price + "worry";
     
         document.getElementById('field').appendChild(div);
       }
