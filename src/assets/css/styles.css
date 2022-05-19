@@ -14,7 +14,6 @@
   font-size: 16px;
   line-height: 1.875em;
   background-size: 80%;
-  
 }
 
 .layer {
@@ -1727,6 +1726,19 @@ h2 {
   padding: 0px;
 }
 
+.nft_header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  background-color: white;
+}
+
+.object {
+  margin-top: 383px;
+}
+
 .title {
   display: block;
   width: 700px;
@@ -1737,18 +1749,13 @@ h2 {
   float: left;
   position: relative;
   display: inline-block;
-  width: 400px;
+  width: 314px;
   margin: 20px;
   color: #232323;
   /* when stop */
   /* when stop */
   /* when stop */
-}
-
-.nft-card:hover .nft-card--content {
-  cursor: pointer;
-  transform: scale(1.01);
-  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 .nft-card.nft-card--locked .nft-card--content {
@@ -2222,8 +2229,8 @@ h2 {
   margin-left: 5px;
 }
 
-.nft-card .nft-card--content {
-  width: 108%;
+.nft-card {
+  width: 314px;
   height: 100%;
   object-fit: scale-down;
 }
@@ -2235,7 +2242,7 @@ h2 {
   object-fit: scale-down;
 }
 
-.nft-card .nft-card--content .nft-badge {
+.nft-card .nft-badge {
   position: absolute;
   z-index: 10;
   bottom: 30px;
@@ -2585,8 +2592,8 @@ p {
 
 .nft-card .nft-card--content {
   position: relative;
-  width: 384px;
-  height: 400px;
+  width: 300px;
+  height: 320px;
   color: #fff;
   background: #fff;
   margin: 0 auto;
@@ -2604,14 +2611,16 @@ p {
 
 .page_character_spritesheet {
   animation: moveSpritesheet 1s steps(4) infinite;
-  width: calc(201px * var(--pixel-size));
+  width: calc(159px * var(--pixel-size));
   position: absolute;
 }
 
 #field {
+  margin-left: 311px;
+  margin-right: 400px;
   display: grid;
   align-items: center;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-column-gap: 50px;
   grid-row-gap: 70px;
 }
@@ -2641,6 +2650,8 @@ p {
 }
 
 .carditems {
+  width: 304px;
+  height: 393px;
   padding-bottom: 50px;
   border-style: solid;
   border-width: 5px;
