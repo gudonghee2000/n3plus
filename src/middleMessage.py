@@ -1,7 +1,9 @@
 import sys 
 from pororo import Pororo
 
-zsl = Pororo(task="zero-topic")
+Pororo.available_tasks()
+
+zsl = Pororo(task="zero-topic", lang="ko")
 
 def getMessage(message): 
     print(zsl(message, ['긍정', '부정']))
