@@ -1,6 +1,13 @@
 //This stuff just makes the demo's UI work. ---------------
 var characterElement= document.querySelector(".Character");
 
+$('html, body').css({'overflow': 'hidden', 'height': '100%'});
+$('#element').on('scroll mousewheel', function(event) {
+  event.preventDefault();
+  event.stopPropagation();
+  return false;
+});
+
 
 var spritesheets_base = [
     "good_base.png",

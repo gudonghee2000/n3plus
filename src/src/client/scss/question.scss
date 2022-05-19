@@ -20,7 +20,7 @@
     align-items: center;
     flex-shrink: 0;
     height: 45px;
-    width: 54.2%;
+    width: 54.5%;
     background-color: rgba(54, 54, 54, 0.8);
     border-style: solid;
     border-width: 5px;
@@ -36,8 +36,8 @@
 .question_items_line {
    touch-action: none;
    margin-left: 22.5%;
-   padding-bottom: 269px;
-   width: 54.2%;
+   padding-bottom: 435px;
+   width: 54.5%;
    border-style: solid;
    border-width: 5px;
    border-top-width: 0px;
@@ -115,8 +115,8 @@ ul {
    position: absolute;
    z-index: 99;
    left: 50%;
-   bottom: $pixel * 5;
-   max-width: 35.5rem;
+   bottom: 6.25rem;
+   max-width: 37.5rem;
    width: 100%;
    margin-top: $pixel * 5;
    margin-bottom: $pixel * 3;

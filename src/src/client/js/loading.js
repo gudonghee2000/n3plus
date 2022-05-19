@@ -6,6 +6,13 @@ var liLength = 4;
 var typingTxt = $("#loading_" + liIndex).text();
 typingTxt = typingTxt.split("");
 
+$('html, body').css({'overflow': 'hidden', 'height': '100%'});
+$('#element').on('scroll mousewheel', function(event) {
+  event.preventDefault();
+  event.stopPropagation();
+  return false;
+});
+
 const reStart = document.querySelector("#loading_restart");
 
 setInterval(typing, 100);

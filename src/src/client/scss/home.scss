@@ -74,6 +74,7 @@ $pixel: 0.25rem;
    display: block;
    margin: auto;
    margin-top: -20px;
+   margin-bottom : 50px;
 }
 
 .home_title {
@@ -83,8 +84,6 @@ $pixel: 0.25rem;
    margin: auto;
    margin-top: -70px;
 }
-
-
 
 .Character1 {
    touch-action: none;
@@ -144,11 +143,11 @@ $pixel: 0.25rem;
    position: absolute;
    z-index: 99;
    left: 50%;
-   bottom: $pixel * 20;
+   bottom: 11rem;
    max-width: $pixel * 150;
    width: 100%;
    margin-top: $pixel * 5;
-   margin-bottom: $pixel * 3;
+   margin-bottom: $pixel * 1;
    transform: translateX(-50%);
 
    @include dialogStyles;

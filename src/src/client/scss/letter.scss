@@ -10,7 +10,7 @@
     align-items: center;
     flex-shrink: 0;
     height: 45px;
-    width: 54.2%;
+    width: 54.5%;
     background-color: rgba(54, 54, 54, 0.8);
     border-style: solid;
     border-width: 5px;
@@ -22,12 +22,13 @@
     touch-action: none;
     position: absolute;
     left: 50%;
-    bottom: $pixel * 20;
+    bottom: 7.75rem;
     max-width: 35.5rem;
     width: 100%;
     margin-top: $pixel * 5;
     margin-bottom: $pixel * 3;
     transform: translateX(-50%);
+    padding: 1.75rem;
  
     @include dialogStyles;
     
@@ -44,8 +45,8 @@
 .letter_items_line {
     touch-action: none;
     margin-left: 22.5%;
-    padding-bottom: 333px;
-    width: 54.2%;
+    padding-bottom: 563px;
+    width: 54.5%;
     border-style: solid;
     border-width: 5px;
     border-top-width: 0px;
@@ -105,7 +106,7 @@ h2 {
     margin: 70px auto;
     background: #fff;
     border-radius: 15px 15px 5px 5px;
-    width: 400px;
+    width: 570px;
     position: relative;
     transition: all 2s ease-in-out;
     align-items: center;
@@ -189,7 +190,7 @@ h2 {
     border-radius: 100%;
     background: #FFFFFF;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
-    margin-top: 90px;
+    margin-top: 126px;
 }
 
 .wave-effect span {

@@ -1,6 +1,13 @@
 import "../scss/styles.scss";
 import html2canvas from "html2canvas";
 
+$('html, body').css({'overflow': 'hidden', 'height': '100%'});
+$('#element').on('scroll mousewheel', function(event) {
+  event.preventDefault();
+  event.stopPropagation();
+  return false;
+});
+
 const dlBtn = document.querySelector(".new-btn");
 
 dlBtn.addEventListener("click", function () {
