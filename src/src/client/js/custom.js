@@ -157,15 +157,6 @@ spritesheets_base.forEach((spritesheet, index) => {
     spritesheetElements += `<img src="${spritesheet}" class="PixelArtImage walk Character_sprite-sheet_base base_index-${index}" />`
 });
 
-spritesheets_hair.forEach((spritesheet, index) => {
-	spritesheetElements += `<img src="${spritesheet}" class="PixelArtImage walk Character_sprite-sheet_hair hair_index-${index}" />`
-	// navigationElements += `<button class="NavigationBubble index-${index}" onclick='setActive_hair(${index})' />`
-});
-
-spritesheets_accessory.forEach((spritesheet, index) => {
-	spritesheetElements += `<img src="${spritesheet}" class="PixelArtImage walk Character_sprite-sheet_accessory accessory_index-${index}" />`
-	// navigationElements += `<button class="NavigationBubble index-${index}" onclick='setActive_accessory(${index})' />`
-});
 spritesheets_shoes.forEach((spritesheet, index) => {
 	spritesheetElements += `<img src="${spritesheet}" class="PixelArtImage walk Character_sprite-sheet_shoes shoes_index-${index}" />`
 	// navigationElements += `<button class="NavigationBubble index-${index}" onclick='setActive_shoes(${index})' />`
@@ -181,6 +172,16 @@ spritesheets_cloth.forEach((spritesheet, index) => {
 	// navigationElements += `<button class="NavigationBubble index-${index}" onclick='setActive_cloth(${index})' />`
 });
 
+
+spritesheets_hair.forEach((spritesheet, index) => {
+	spritesheetElements += `<img src="${spritesheet}" class="PixelArtImage walk Character_sprite-sheet_hair hair_index-${index}" />`
+	// navigationElements += `<button class="NavigationBubble index-${index}" onclick='setActive_hair(${index})' />`
+});
+
+spritesheets_accessory.forEach((spritesheet, index) => {
+	spritesheetElements += `<img src="${spritesheet}" class="PixelArtImage walk Character_sprite-sheet_accessory accessory_index-${index}" />`
+	// navigationElements += `<button class="NavigationBubble index-${index}" onclick='setActive_accessory(${index})' />`
+});
 
 
 
@@ -414,12 +415,11 @@ function shoes_re() {
 
 //기본 세팅
 setActive_base(activeIndex_base);
-setActive_accessory(activeIndex_accessory);
-setActive_hair(activeIndex_hair);
 setActive_cloth(activeIndex_cloth);
 setActive_shoes(activeIndex_shoes);
 setActive_bottom(activeIndex_bottom);
-
+setActive_accessory(activeIndex_accessory);
+setActive_hair(activeIndex_hair);
 
 const accessoryPrevButton = document.querySelector(".NextSpritesheetButton--prev--accessory");
 const accessoryNextButton = document.querySelector(".NextSpritesheetButton--next--accessory");

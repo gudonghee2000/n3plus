@@ -13,7 +13,8 @@
   font-family: "Pokemon GB", monospace;
   font-size: 16px;
   line-height: 1.875em;
-  background-size: 80%;
+  background-size: 114%;
+  background-image: url("./background.gif");
 }
 
 .layer {
