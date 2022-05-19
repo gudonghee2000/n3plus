@@ -50,12 +50,13 @@ function makeMessage(pororoResult) {
 
 export const postQuestionSave = async (req, res) => {
     const { id, clientmessage, userName, name, category } = req.body;
+    const randomPrice = (Math.random() * 0.01).toFixed(4);
     console.log(clientmessage);
     console.log(userName);
     console.log(name);
     console.log(id);
     console.log(category);
-    await customModel.findOneAndUpdate({ id }, { $set: { username: userName, message: clientmessage, categoryName: category } });
+    await customModel.findOneAndUpdate({ id }, { $set: { username: userName, message: clientmessage, categorys: category, price:randomPrice  } });
 }
 
 export const postMiddleQuestion = async (req, res) => {

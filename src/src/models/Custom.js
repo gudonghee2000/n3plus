@@ -9,6 +9,7 @@ const customSchema = new mongoose.Schema({
     username: String,
     message: String,
     categorys: {type: String, default: "없음"},
+    price: Number,
 })
 
 customSchema.plugin(autoIncrement.plugin,{ 

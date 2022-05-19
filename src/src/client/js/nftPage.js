@@ -11,15 +11,8 @@ function add_div() {
     async: true,
     success: function (data) {
       datas = data.items;
-      console.log(datas);
       for (var i = 0; i < datas.length; i++) {
-        var idDiv = document.createElement('div');
-        idDiv.style.display = "none";
-        idDiv.innerText = datas[i].id;
 
-        var link = document.querySelector(".nft-link");
-        link.href = "http://34.64.194.130:8080//nftpage/webcame/" + idDiv.innerText;
-        
         var imgTag = document.getElementById('photo2');
         imgTag.setAttribute("src", datas[i].url);
     
@@ -35,7 +28,7 @@ function add_div() {
         div.innerHTML = document.getElementById('room_type').innerHTML;
 
         var price = document.querySelector(".fa-brands");
-        price.innerHTML = " " + (Math.random() * 0.01).toFixed(4) + "worry";
+        price.innerHTML = " " + datas[i].price + "worry";
     
         document.getElementById('field').appendChild(div);
       }
@@ -43,10 +36,6 @@ function add_div() {
   });
 }
 
-// Audio
-var audio = new Audio('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/Lecrae_-_Anomaly_(Lyric_Video).mp3');
-audio.volume = 0.1;
-audio.autoplay = true;
 
 $('.nft-card--music').hover(function () {
   if (audio.paused == false) {
