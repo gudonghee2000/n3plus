@@ -24,11 +24,11 @@ function add_div() {
           category.innerText = datas[i].categorys;
         }
        
-        var div = document.createElement('div');
-        div.innerHTML = document.getElementById('room_type').innerHTML;
-
         const price = document.querySelector(".fa-brands");
         price.innerText = " " + datas[i].price + "worry";
+
+        var div = document.createElement('div');
+        div.innerHTML = document.getElementById('room_type').innerHTML;
     
         document.getElementById('field').appendChild(div);
       }
