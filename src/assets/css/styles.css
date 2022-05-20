@@ -13,8 +13,7 @@
   font-family: "Pokemon GB", monospace;
   font-size: 16px;
   line-height: 1.875em;
-  background-size: 114%;
-  background-image: url("./background.gif");
+  background-size: 80%;
 }
 
 .layer {
@@ -692,8 +691,8 @@ body {
 .btn {
   touch-action: none;
   position: relative;
-  width: 35px;
-  margin: 10px 0px 15px 0px;
+  width: 50px;
+  margin: 10px 10px 15px 10px;
   color: #76777e;
   box-shadow: 0 -3px 0 #35363a, 0 3px 0 #35363a, 3px 0 0 #35363a, -3px 0 0 #35363a;
   /*width: 60px;*/
@@ -1387,7 +1386,7 @@ h2 {
   width: 100%;
   background-color: rgba(54, 54, 54, 0.8);
   border-bottom: 5px solid rgba(113, 119, 144, 0.25);
-  border-radius: 15px 15px 0px 0px;
+  border-radius: 10px 10px 0px 0px;
   border-color: black;
 }
 
@@ -1610,7 +1609,7 @@ h2 {
   height: calc(32px * var(--pixel-size2));
   position: relative;
   overflow: hidden;
-  margin: -1em auto;
+  margin: 8rem auto;
   margin-bottom: 10rem;
 }
 
@@ -1723,8 +1722,22 @@ h2 {
   border-color: black;
 }
 
-.nftpage_body {
-  padding: 0px;
+body {
+  background-image: linear-gradient(360deg, #eaeaea 20%, #8bcfcc 80%);
+}
+
+.bg-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  object-fit: cover;
+}
+
+.bg-img-class {
+  position: relative;
+  background-repeat: repeat-y;
+  background-size: contain;
 }
 
 .nft_header {
@@ -1737,7 +1750,7 @@ h2 {
 }
 
 .object {
-  margin-top: 383px;
+  margin-top: 300px;
 }
 
 .title {
@@ -1747,16 +1760,18 @@ h2 {
 }
 
 .nft-card {
+  background-color: white;
   float: left;
   position: relative;
   display: inline-block;
   width: 314px;
   margin: 20px;
   color: #232323;
+  border-radius: 15px;
   /* when stop */
   /* when stop */
   /* when stop */
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 50px -20px, rgba(0, 0, 0, 0.2) 0px 30px 60px -30px;
 }
 
 .nft-card.nft-card--locked .nft-card--content {
@@ -2540,7 +2555,6 @@ h2 {
   font-size: 14px;
   font-weight: normal;
   line-height: 1.5;
-  opacity: 45%;
 }
 
 .nft-price i,
@@ -2666,9 +2680,15 @@ p {
   font-weight: 550;
   font-size: 20px;
   color: black;
-  font-size: 25px;
+  font-size: 24px;
   color: rgb(0, 0, 0);
   font-weight: 900;
+}
+
+#nft-value {
+  font-size: 20px;
+  color: black;
+  font-weight: 500;
 }
 
 #nft_category {
@@ -2676,6 +2696,8 @@ p {
   font-weight: 550;
   font-size: 20px;
   color: black;
+  margin-top: 0.4rem;
+  margin-left: -0.3rem;
   font-size: 15px;
   color: rgb(0, 0, 0);
   font-weight: 900;
@@ -2686,7 +2708,7 @@ p {
   font-weight: 550;
   font-size: 20px;
   color: black;
-  font-size: 17px;
+  font-size: 16px;
   color: rgb(0, 0, 0);
   font-weight: 900;
 }

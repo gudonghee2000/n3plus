@@ -7,11 +7,17 @@
   <link rel='stylesheet' href='https://use.fontawesome.com/releases/v6.1.1/css/all.css'>
   <link rel="stylesheet" href="/static/css/styles.css">
 </head>
-<body class="nftpage_body">
+
+    
+<body>
+
+    <header class="nft_header"> 
+        <img class='title' src="title_noworryland.png"/>
+    </header>   
+    
     <div class="nftpage_items_line">
-        <header class="nft_header"> 
-            <img class='title' src="title.png"/>
-        </header>
+        
+       
         <main>
             <div id="room_type" class="origin">
                 <div class="nft-card">
@@ -32,20 +38,22 @@
                         <div class="nft-card--footer">
                             <div class="nft-price">
                                 <span id="nft-price-span">총 걱정비용</span>
-                                <i class="fa-brands fa-bitcoin"></i>
+                                <span id="nft-value" class="fa-brands fa-bitcoin"></span>
                             </div>
                             <div class="nft-time">
                                 <i class="far fa-solid fa-heart fa-beat"><span id="nft_category"></span></i>
+                                
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </main>
-        <div class="object">
-            <div id="field" ></div>
-        </div>
+            <div class="object">
+                <div id="field" ></div>
+            </div>
+        </main>    
     </div>
+    
     <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
     <script  src="/static/js/nftPage.js"></script>
 </body>

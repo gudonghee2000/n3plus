@@ -1,5 +1,6 @@
 var checkIdx = 1;
-var typingTxt = "안녕 만나서 반가워😊. \n 나는 널 뭐라고 부르면 될까? \n";
+var typingTxt = "안녕^^ 만나서 반가워😊. \n 나는 널 뭐라고 부르면 될까? \n";
+
 var typingIdx = 0;
 const text = document.querySelector(".question_typing");
 
@@ -79,7 +80,6 @@ nameAnswer.addEventListener('keypress', function (key) {
 
 var messageForClient = nameResult + "에게, \n ";
 
-
 function secondTyping() {
     if (checkIdx >= 3) {
         return;
@@ -155,9 +155,9 @@ function createThirdAnswer() {
         first.setAttribute("class", "answer1");
         second.setAttribute("class", "answer1");
         third.setAttribute("class", "answer1");
-        first.textContent = "그래도 대체로 강한 편인 것 같아";
-        second.textContent = "사실 좀 유리 멘탈인 것 같아..";
-        third.textContent = "상황에 따라 되게 달라지는 것 같아";
+        first.textContent = "▶ 대체로 강한 편인 것 같아";
+        second.textContent = "▶ 사실 좀 유리 멘탈인 것 같아..";
+        third.textContent = "▶ 상황에 따라 되게 달라지는 것 같아";
         const controls = document.querySelector(".question_color-controls");
         controls.appendChild(first);
         controls.appendChild(blank);
@@ -172,7 +172,7 @@ function createThirdAnswer() {
             controls.removeChild(blank2);
             controls.removeChild(third);
             document.querySelector(".question_typing").style.display = "inline-block";
-            messageForClient = "누구보다 강인한 멘탈을 가진 " + nameResult + "! 나 " + characterName + "! \n";
+            messageForClient = "누구보다 강인한 멘탈을 가진 " + nameResult + "! \n 나 " + characterName + "!";
             const character = document.querySelector(".question_pixelart");
             character.classList.remove("question_face-left");
             tyfour = setInterval(fourTyping, 100);
@@ -184,7 +184,7 @@ function createThirdAnswer() {
             controls.removeChild(blank2);
             controls.removeChild(third);
             document.querySelector(".question_typing").style.display = "inline-block";
-            messageForClient = "스스로 약한 멘탈을 갖고 있다고 말했지만, 그 속에 강인함을 감추고 있는 " + nameResult + "! 나 " + characterName + "! \n";
+            messageForClient = "스스로 약한 멘탈을 갖고 있다고 말했지만, 그 속에 강인함을 감추고 있는 " + nameResult + "! \n 나 " + characterName + "!";
             const character = document.querySelector(".question_pixelart");
             character.classList.remove("question_face-left");
             tyfour = setInterval(fourTyping, 100);
@@ -196,7 +196,7 @@ function createThirdAnswer() {
             controls.removeChild(blank2);
             controls.removeChild(third);
             document.querySelector(".question_typing").style.display = "inline-block";
-            messageForClient = "누구보다 상황을 유연하게 맞이하려고 하는 " + nameResult + ". 나 " + characterName + "! \n";
+            messageForClient = "누구보다 상황을 유연하게 맞이하려고 하는 " + nameResult + ". \n 나 " + characterName + "!";
             const character = document.querySelector(".question_pixelart");
             character.classList.remove("question_face-left");
             tyfour = setInterval(fourTyping, 100);
@@ -228,7 +228,7 @@ function fourTyping() {
 var fourAnswerBool = false;
 function createFourAnswer() {
     if (fourAnswerBool === false) {
-        messageForClient += "살다보니 참 별일이 다 있지? ";
+        messageForClient += "살다보니 참 별일이 다 있지? \n";
         document.querySelector(".question_typing").style.display = "none";
         const first = document.createElement("p");
         const second = document.createElement("p");
@@ -236,9 +236,9 @@ function createFourAnswer() {
         first.setAttribute("class", "answer2");
         second.setAttribute("class", "answer2");
         third.setAttribute("class", "answer2");
-        first.textContent = "항상 사람들이 날 힘들게 하는 것 같아";
-        second.textContent = "어떤 상황이 날 힘들게 하는 경우가 많았어";
-        third.textContent = "복합적인 이유가 있는 것 같아";
+        first.textContent = "▶ 항상 사람들이 날 힘들게 하는 것 같아";
+        second.textContent = "▶ 어떤 상황이 날 힘들게 하는 경우가 많았어";
+        third.textContent = "▶ 복합적인 이유가 있는 것 같아";
         const controls = document.querySelector(".question_color-controls");
         controls.appendChild(first);
         controls.appendChild(second);
@@ -432,7 +432,7 @@ function sevenTyping() {
 var newAnswerBool = false;
 function createNewAnswer() {
     if (newAnswerBool === false) {
-        messageForClient += "나도 방금 태어났지만, 세상이 마냥 쉽지 않다는 것 정도는 알 것 같아!ㅋ \n ";
+        messageForClient += "나도 방금 태어났지만, 세상이 마냥 쉽지 않다는 것 정도는 알 것 같아!ㅎ \n ";
         document.querySelector(".question_typing").style.display = "none";
         const first = document.createElement("p");
         const second = document.createElement("p");
@@ -461,7 +461,7 @@ function createNewAnswer() {
             controls.removeChild(first);
             controls.removeChild(second);
             document.querySelector(".question_typing").style.display = "inline-block";
-            messageForClient += "가끔 마음이 어려운 순간이 오더라도,지금처럼 주변에 이야기도 나누면서 마음의 짐도 나눴으면 좋겠다! \n";
+            messageForClient += "가끔 마음이 어려운 순간이 오더라도, 지금처럼 주변에 이야기도 나누면서 마음의 짐도 나눴으면 좋겠다! \n";
             typingIdx = 0;
             typingTxt = "맞아. 가끔은 누군가에게 털어놓는 것만으로도 \n 많은 위로가 되기도 하지. \n 최근에 답답한 일이나 고민이 있었다면 \n 조금이라도 나한테 말해줄래? 🙏";
             tyfive = setInterval(eightTyping, 100);
@@ -570,7 +570,7 @@ function nineTyping() {
 
 function saveClientData() {
     const onlyid = document.querySelector("#onlyid").innerText;
-    messageForClient += categoryName + "에 관한 걱정은 내가 갖고 사라질게! 마법처럼 모든 일이 사라지거나 해결되지 않더라도, 분명 네 안에 또 한번 맞설 수 있는 힘이 생겼을거야. 널 믿는다 친구!"
+    messageForClient += categoryName + "에 관한 걱정은 내가 갖고 사라질게! \n 마법처럼 모든 일이 사라지거나 해결되지 않더라도, 분명 네 안에 또 한번 맞설 수 있는 힘이 생겼을거야. \n 널 믿는다 친구!"
     $.ajax({
         type: "POST",
         url: "/question/save",
@@ -618,3 +618,4 @@ function createTenAnswer() {
         newAnswerBool = true;
     }
 }
+
