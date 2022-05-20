@@ -13,8 +13,7 @@
   font-family: "Pokemon GB", monospace;
   font-size: 16px;
   line-height: 1.875em;
-  background-size: 114%;
-  background-image: url("./backgrouind.gif");
+  background-size: 80%;
 }
 
 .layer {
@@ -1362,6 +1361,7 @@ h2 {
   border-style: solid;
   border-width: 5px;
   border-color: black;
+  padding-bottom: 20;
 }
 
 .popup .content {
@@ -1373,10 +1373,16 @@ h2 {
   -webkit-font-smoothing: none;
   color: #555;
   touch-action: none;
-  padding: 0px;
   max-height: 30%;
   text-align: left;
   overflow: auto;
+}
+
+.content {
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 4px;
 }
 
 .letter_inner_header {
