@@ -1373,8 +1373,9 @@ h2 {
   -webkit-font-smoothing: none;
   color: #555;
   touch-action: none;
-  padding: 20px;
+  padding: 0px;
   max-height: 30%;
+  text-align: left;
   overflow: auto;
 }
 
