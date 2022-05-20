@@ -6,6 +6,14 @@ const text = document.querySelector(".question_typing");
 
 var tyInt = setInterval(firstTyping, 100);
 
+$('html, body').css({'overflow': 'hidden', 'height': '100%'});
+$('#element').on('scroll mousewheel', function(event) {
+  event.preventDefault();
+  event.stopPropagation();
+  return false;
+});
+
+
 $.fn.textWidth = function (text, font) {
 
     if (!$.fn.textWidth.fakeEl) $.fn.textWidth.fakeEl = $('<span>').hide().appendTo(document.body);

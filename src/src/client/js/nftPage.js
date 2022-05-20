@@ -26,7 +26,7 @@ function add_div() {
        
         const price = document.querySelector(".fa-brands");
         price.innerText = " " + datas[i].price + "worry";
-
+        
         var div = document.createElement('div');
         div.innerHTML = document.getElementById('room_type').innerHTML;
     
@@ -35,7 +35,6 @@ function add_div() {
     }
   });
 }
-
 
 $('.nft-card--music').hover(function () {
   if (audio.paused == false) {
